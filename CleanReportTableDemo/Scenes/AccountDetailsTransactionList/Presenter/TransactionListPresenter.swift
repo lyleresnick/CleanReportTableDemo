@@ -6,14 +6,12 @@ class TransactionListPresenter {
     
     weak var viewController: TransactionListPresenterOutput!
     
-    private static func dateFormat(format: String) -> DateFormatter {
+    fileprivate static let outboundDateFormatter: DateFormatter =  {
         let formatter = DateFormatter()
-        formatter.dateFormat = format
+        formatter.dateFormat = "MMM' 'dd', 'yyyy"
         return formatter
-    }
-    
-    fileprivate static let outboundDateFormat = dateFormat(format: "MMM' 'dd', 'yyyy")
-    
+    }()
+
     fileprivate var rows = [TransactionListViewModel]()
     fileprivate var odd = false
     
@@ -65,7 +63,7 @@ extension TransactionListPresenter: TransactionListUseCaseOutput {
     }
     
     fileprivate func formatDate(date: Date) -> String {
-        return TransactionListPresenter.outboundDateFormat.string(from: date)
+        return TransactionListPresenter.outboundDateFormatter.string(from: date)
     }
     
     func presentDetail(description: String, amount: Double) {

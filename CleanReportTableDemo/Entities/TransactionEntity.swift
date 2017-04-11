@@ -11,13 +11,11 @@ struct TransactionEntity {
     var description: String
     var amount: Double
     
-    private static func dateFormat(format: String ) -> DateFormatter {
+    private static let inboundDateFormatter: DateFormatter =  {
         let formatter = DateFormatter()
-        formatter.dateFormat = format
+        formatter.dateFormat = "yyyy'-'MM'-'dd"
         return formatter
-    }
-    
-    private static let inboundDateFormat = dateFormat( format: "yyyy'-'MM'-'dd" )
+    }()
 
     init( group: String, date: String, description: String, amount: String, debit: String ) {
         
@@ -26,7 +24,7 @@ struct TransactionEntity {
         }
         self.group = group
         
-        guard let date = TransactionEntity.inboundDateFormat.date( from: date )
+        guard let date = TransactionEntity.inboundDateFormatter.date( from: date )
         else {
             fatalError("Format of Transaction Date is incorrect")
         }
