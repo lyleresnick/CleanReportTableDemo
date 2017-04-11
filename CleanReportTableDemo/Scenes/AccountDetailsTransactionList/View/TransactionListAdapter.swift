@@ -5,7 +5,6 @@ import UIKit
 class TransactionListAdapter: NSObject {
     
     var presenter: TransactionListPresenter!
-    
 }
 
 // MARK: UITableViewDataSource

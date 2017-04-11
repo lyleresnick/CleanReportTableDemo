@@ -5,7 +5,6 @@ import Foundation
 
 class TransactionListTwoSourceUseCaseTransformer {
     
-    typealias Group = TransactionGroup
     private let entityGateway: EntityGateway
     
     init(entityGateway: EntityGateway) {
@@ -15,15 +14,16 @@ class TransactionListTwoSourceUseCaseTransformer {
     func transform(presenter: TransactionListUseCaseOutput) {
         
         presenter.presentInit()
-        var grandTotal = 0.0
 
+        var grandTotal = 0.0
         grandTotal += transform(source: entityGateway.fetchAuthorizedTransactions(), group: .Authorized, presenter: presenter)
         grandTotal += transform(source: entityGateway.fetchPostedTransactions(), group: .Posted, presenter: presenter)
         presenter.presentGrandFooter(grandTotal: grandTotal)
+
         presenter.presentReport()
     }
 
-    private func transform(source: [TransactionEntity]?, group: Group, presenter: TransactionListUseCaseOutput) -> Double {
+    private func transform(source: [TransactionEntity]?, group: TransactionGroup, presenter: TransactionListUseCaseOutput) -> Double {
         
         var total = 0.0
 

@@ -5,9 +5,9 @@ import UIKit
 
 class TransactionListConnector {
     
-    let viewController: TransactionListViewController
-    var useCase: TransactionListUseCase
-    let presenter: TransactionListPresenter
+    private let viewController: TransactionListViewController
+    private var useCase: TransactionListUseCase
+    private let presenter: TransactionListPresenter
     
     init(viewController: TransactionListViewController, useCase: TransactionListUseCase, presenter: TransactionListPresenter) {
         

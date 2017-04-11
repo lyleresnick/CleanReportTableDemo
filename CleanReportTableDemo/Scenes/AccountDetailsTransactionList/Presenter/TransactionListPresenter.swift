@@ -6,7 +6,7 @@ class TransactionListPresenter {
     
     weak var viewController: TransactionListPresenterOutput!
     
-    fileprivate static func dateFormat(format: String) -> DateFormatter {
+    private static func dateFormat(format: String) -> DateFormatter {
         let formatter = DateFormatter()
         formatter.dateFormat = format
         return formatter
