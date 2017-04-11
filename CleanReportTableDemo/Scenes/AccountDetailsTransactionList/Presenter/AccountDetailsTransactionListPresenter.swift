@@ -84,9 +84,9 @@ extension AccountDetailsTransactionListPresenter: AccountDetailsTransactionListU
         rows.append(.footer(total: "\(total)", odd: odd));
     }
     
-    func presentGrandFooter(total: Double) {
+    func presentGrandFooter(grandTotal: Double) {
         
-        rows.append(.grandfooter(total: "\(total)"));
+        rows.append(.grandfooter(total: "\(grandTotal)"));
     }
     
     func presentNotFoundMessage(group: TransactionGroup) {

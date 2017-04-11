@@ -10,7 +10,7 @@ protocol AccountDetailsTransactionListUseCaseOutput: class {
     func presentDetail(description: String, amount: Double)
     func presentSubfooter()
     func presentFooter(total: Double)
-    func presentGrandFooter(total: Double)
+    func presentGrandFooter(grandTotal: Double)
     func presentNotFoundMessage(group: TransactionGroup)
     
     func presentReport()

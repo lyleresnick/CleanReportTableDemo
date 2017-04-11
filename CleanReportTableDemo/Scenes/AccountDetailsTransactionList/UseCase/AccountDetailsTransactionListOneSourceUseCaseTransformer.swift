@@ -59,7 +59,7 @@ class AccountDetailsTransactionListOneSourceUseCaseTransformer {
                 minGroup = determineMinGroup(group: currentGroup, transaction: currentTransaction)
             }
         }
-        presenter.presentGrandFooter(total: grandTotal)
+        presenter.presentGrandFooter(grandTotal: grandTotal)
         presenter.presentReport()
     }
     
