@@ -15,12 +15,12 @@ class AccountDetailsTransactionListUseCase {
 
     func beginTwoSource() {
         let transformer = AccountDetailsTransactionListTwoSourceUseCaseTransformer(entityGateway: entityGateway)
-        transformer.transform( presenter: presenter )
+        transformer.transform(presenter: presenter)
     }
     
     func beginOneSource() {
         let transformer = AccountDetailsTransactionListOneSourceUseCaseTransformer(entityGateway: entityGateway)
-        transformer.transform( presenter: presenter )
+        transformer.transform(presenter: presenter)
     }
     
 

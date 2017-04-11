@@ -19,19 +19,20 @@ class AccountDetailsTransactionListOneSourceUseCaseTransformer {
         var transactionStream = entityGateway.fetchAllTransactions().makeIterator()
         var currentTransaction = transactionStream.next()
         
-        var minGroup = determineMinGroup( group: currentGroup, transaction: currentTransaction )
+        var minGroup = determineMinGroup(group: currentGroup, transaction: currentTransaction)
         
         presenter.presentInit()
 
+        var grandTotal = 0.0
         while let localMinGroup = minGroup {
 
             presenter.presentHeader(group: localMinGroup)
             
             if (currentTransaction == nil) || (localMinGroup != currentTransaction!.group) {
                 
-                presenter.presentGroupNotFoundMessage( group: localMinGroup )
+                presenter.presentNotFoundMessage(group: localMinGroup)
                 currentGroup = groupStream.next()
-                minGroup = determineMinGroup( group: currentGroup, transaction: currentTransaction )
+                minGroup = determineMinGroup(group: currentGroup, transaction: currentTransaction)
             }
             else {
                 var total = 0.0
@@ -44,8 +45,10 @@ class AccountDetailsTransactionListOneSourceUseCaseTransformer {
                     while let localCurrentTransaction = currentTransaction,
                           (localCurrentTransaction.group == localMinGroup) && (localCurrentTransaction.date == currentDate) {
                         
-                        total += localCurrentTransaction.amount
-                        presenter.presentDetail(description: localCurrentTransaction.description, amount: localCurrentTransaction.amount)
+                        let amount = localCurrentTransaction.amount
+                        total += amount
+                        grandTotal += amount
+                        presenter.presentDetail(description: localCurrentTransaction.description, amount: amount)
                         
                         currentTransaction = transactionStream.next()
                     }
@@ -53,13 +56,14 @@ class AccountDetailsTransactionListOneSourceUseCaseTransformer {
                 }
                 presenter.presentFooter(total: total)
                 currentGroup = groupStream.next()
-                minGroup = determineMinGroup( group: currentGroup, transaction: currentTransaction )
+                minGroup = determineMinGroup(group: currentGroup, transaction: currentTransaction)
             }
         }
+        presenter.presentGrandFooter(total: grandTotal)
         presenter.presentReport()
     }
     
-    private func determineMinGroup(group: TransactionGroup?, transaction: TransactionEntity? ) -> TransactionGroup? {
+    private func determineMinGroup(group: TransactionGroup?, transaction: TransactionEntity?) -> TransactionGroup? {
         
         if (group == nil) && (transaction == nil) {
             return nil

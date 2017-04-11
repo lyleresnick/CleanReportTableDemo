@@ -6,13 +6,13 @@ class AccountDetailsTransactionListPresenter {
     
     weak var viewController: AccountDetailsTransactionListPresenterOutput!
     
-    fileprivate static func dateFormat(format: String ) -> DateFormatter {
+    fileprivate static func dateFormat(format: String) -> DateFormatter {
         let formatter = DateFormatter()
         formatter.dateFormat = format
         return formatter
     }
     
-    fileprivate static let outboundDateFormat = dateFormat( format: "MMM' 'dd', 'yyyy" )
+    fileprivate static let outboundDateFormat = dateFormat(format: "MMM' 'dd', 'yyyy")
     
     fileprivate var rows = [AccountDetailsTransactionListViewModel]()
     fileprivate var odd = false
@@ -53,38 +53,43 @@ extension AccountDetailsTransactionListPresenter: AccountDetailsTransactionListU
         viewController.showReport()
     }
 
-    func presentHeader( group: TransactionGroup ) {
+    func presentHeader(group: TransactionGroup) {
         
         rows.append(.header(title: group.toString() + " Transactions"));
     }
     
-    func presentSubheader( date: Date ) {
+    func presentSubheader(date: Date) {
         
         odd = !odd;
-        rows.append(.subheader(title: formatDate( date: date ), odd: odd))
+        rows.append(.subheader(title: formatDate(date: date), odd: odd))
     }
     
-    fileprivate func formatDate( date: Date) -> String {
+    fileprivate func formatDate(date: Date) -> String {
         return AccountDetailsTransactionListPresenter.outboundDateFormat.string(from: date)
     }
     
-    func presentDetail( description: String, amount: Double) {
+    func presentDetail(description: String, amount: Double) {
         
-        rows.append( .detail(description: description, amount: String(amount), odd: odd));
+        rows.append(.detail(description: description, amount: String(amount), odd: odd));
     }
     
     func presentSubfooter() {
         
-        rows.append(.subfooter( odd: odd ));
+        rows.append(.subfooter(odd: odd));
     }
     
-    func presentFooter( total: Double ) {
+    func presentFooter(total: Double) {
         
         odd = !odd;
         rows.append(.footer(total: "\(total)", odd: odd));
     }
     
-    func presentGroupNotFoundMessage( group: TransactionGroup ) {
+    func presentGrandFooter(total: Double) {
+        
+        rows.append(.grandfooter(total: "\(total)"));
+    }
+    
+    func presentNotFoundMessage(group: TransactionGroup) {
     
         rows.append(.message(message: "\(group.toString()) Transactions are not currently available. You might want to call us and tell us what you think of that!"))
     }
@@ -100,6 +105,7 @@ private extension AccountDetailsTransactionListViewModel {
         case detail
         case subfooter
         case footer
+        case grandfooter
         case message
     }
     
@@ -118,6 +124,8 @@ private extension AccountDetailsTransactionListViewModel {
                 return .message
             case .footer:
                 return .footer
+            case .grandfooter:
+                return .grandfooter
             case .subfooter:
                 return .subfooter
             }
@@ -133,26 +141,17 @@ private extension AccountDetailsTransactionListViewModel {
                 return 34.0
             case .detail:
                 return 18.0
-            case .message:
-                return 100.0
-            case .footer:
-                return 44.0
             case .subfooter:
                 return 18.0
+            case .footer:
+                return 44.0
+            case .grandfooter:
+                return 60.0
+            case .message:
+                return 100.0
             }
         }
     }
 }
 
-private extension TransactionGroup  {
-    
-    func toString() -> String {
-        switch self {
-        case .Authorized:
-            return "Authorized"
-        case .Posted:
-            return "Posted"
-        }
-    }
-}
 

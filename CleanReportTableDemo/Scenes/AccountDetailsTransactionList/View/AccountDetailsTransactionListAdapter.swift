@@ -17,8 +17,8 @@ extension AccountDetailsTransactionListAdapter: UITableViewDataSource  {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: presenter.cellId(at: indexPath.row ), for: indexPath )
-        (cell as! AccountDetailsTransactionListCell).show(row: presenter.row(at: indexPath.row ))
+        let cell = tableView.dequeueReusableCell(withIdentifier: presenter.cellId(at: indexPath.row), for: indexPath)
+        (cell as! AccountDetailsTransactionListCell).show(row: presenter.row(at: indexPath.row))
         return cell
     }
 }
@@ -27,7 +27,7 @@ extension AccountDetailsTransactionListAdapter: UITableViewDataSource  {
 extension AccountDetailsTransactionListAdapter: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return presenter.cellHeight(at: indexPath.row )
+        return presenter.cellHeight(at: indexPath.row)
     }
 }
 

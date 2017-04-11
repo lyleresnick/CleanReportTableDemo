@@ -15,19 +15,19 @@ class AccountDetailsTransactionListTwoSourceUseCaseTransformer {
     func transform(presenter: AccountDetailsTransactionListUseCaseOutput) {
         
         presenter.presentInit()
-        transform( source: entityGateway.fetchAuthorizedTransactions(), group: .Authorized, presenter: presenter)
-        transform( source: entityGateway.fetchPostedTransactions(), group: .Posted, presenter: presenter)
+        transform(source: entityGateway.fetchAuthorizedTransactions(), group: .Authorized, presenter: presenter)
+        transform(source: entityGateway.fetchPostedTransactions(), group: .Posted, presenter: presenter)
         presenter.presentReport()
     }
 
-    private func transform( source: [TransactionEntity]?, group: Group, presenter: AccountDetailsTransactionListUseCaseOutput ) {
+    private func transform(source: [TransactionEntity]?, group: Group, presenter: AccountDetailsTransactionListUseCaseOutput) {
         
         var total = 0.0
 
         presenter.presentHeader(group: group)
         
         guard let source = source, source.count != 0 else {
-            presenter.presentGroupNotFoundMessage( group: group )
+            presenter.presentNotFoundMessage(group: group)
             return
         }
         var transactionStream = source.makeIterator()
@@ -47,6 +47,6 @@ class AccountDetailsTransactionListTwoSourceUseCaseTransformer {
             }
             presenter.presentSubfooter()
         }
-        presenter.presentFooter( total: total )
+        presenter.presentFooter(total: total)
     }
 }
