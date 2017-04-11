@@ -7,61 +7,61 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B31212231E4AB3CD0050EBB9 /* AccountDetailsTransactionListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31212201E4AB3CD0050EBB9 /* AccountDetailsTransactionListPresenter.swift */; };
-		B31212241E4AB3CD0050EBB9 /* AccountDetailsTransactionListPresenterOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31212211E4AB3CD0050EBB9 /* AccountDetailsTransactionListPresenterOutput.swift */; };
-		B312122D1E4ABA730050EBB9 /* AccountDetailsTransactionListAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B312122C1E4ABA730050EBB9 /* AccountDetailsTransactionListAdapter.swift */; };
+		B31212231E4AB3CD0050EBB9 /* TransactionListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31212201E4AB3CD0050EBB9 /* TransactionListPresenter.swift */; };
+		B31212241E4AB3CD0050EBB9 /* TransactionListPresenterOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31212211E4AB3CD0050EBB9 /* TransactionListPresenterOutput.swift */; };
+		B312122D1E4ABA730050EBB9 /* TransactionListAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B312122C1E4ABA730050EBB9 /* TransactionListAdapter.swift */; };
 		B313A8931D6E97F200A6F508 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B313A8921D6E97F200A6F508 /* Assets.xcassets */; };
 		B313A8961D6E97F200A6F508 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B313A8941D6E97F200A6F508 /* LaunchScreen.storyboard */; };
-		B331C32B1E9C3E7A00344D09 /* AccountDetailsTransactionListGrandFooterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B331C3291E9C3DB200344D09 /* AccountDetailsTransactionListGrandFooterCell.swift */; };
-		B34F7A431E7763710059252C /* AccountDetailsTransactionListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34F7A421E7763710059252C /* AccountDetailsTransactionListCell.swift */; };
-		B34F7A451E7763AF0059252C /* AccountDetailsTransactionListHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34F7A441E7763AF0059252C /* AccountDetailsTransactionListHeaderCell.swift */; };
-		B34F7A471E7763F80059252C /* AccountDetailsTransactionListSubheaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34F7A461E7763F80059252C /* AccountDetailsTransactionListSubheaderCell.swift */; };
-		B34F7A491E7764B30059252C /* AccountDetailsTransactionListDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34F7A481E7764B30059252C /* AccountDetailsTransactionListDetailCell.swift */; };
-		B34F7A4B1E7764E40059252C /* AccountDetailsTransactionListSubfooterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34F7A4A1E7764E40059252C /* AccountDetailsTransactionListSubfooterCell.swift */; };
-		B34F7A4D1E7765330059252C /* AccountDetailsTransactionListFooterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34F7A4C1E7765320059252C /* AccountDetailsTransactionListFooterCell.swift */; };
-		B34F7A4F1E77656A0059252C /* AccountDetailsTransactionListMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34F7A4E1E77656A0059252C /* AccountDetailsTransactionListMessageCell.swift */; };
+		B331C32B1E9C3E7A00344D09 /* TransactionListGrandFooterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B331C3291E9C3DB200344D09 /* TransactionListGrandFooterCell.swift */; };
+		B34F7A431E7763710059252C /* TransactionListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34F7A421E7763710059252C /* TransactionListCell.swift */; };
+		B34F7A451E7763AF0059252C /* TransactionListHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34F7A441E7763AF0059252C /* TransactionListHeaderCell.swift */; };
+		B34F7A471E7763F80059252C /* TransactionListSubheaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34F7A461E7763F80059252C /* TransactionListSubheaderCell.swift */; };
+		B34F7A491E7764B30059252C /* TransactionListDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34F7A481E7764B30059252C /* TransactionListDetailCell.swift */; };
+		B34F7A4B1E7764E40059252C /* TransactionListSubfooterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34F7A4A1E7764E40059252C /* TransactionListSubfooterCell.swift */; };
+		B34F7A4D1E7765330059252C /* TransactionListFooterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34F7A4C1E7765320059252C /* TransactionListFooterCell.swift */; };
+		B34F7A4F1E77656A0059252C /* TransactionListMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34F7A4E1E77656A0059252C /* TransactionListMessageCell.swift */; };
 		B34F7A641E7809640059252C /* TransactionGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34F7A631E7809640059252C /* TransactionGroup.swift */; };
 		B3721B9F1E860BCC0016D404 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3721B9E1E860BCC0016D404 /* Color.swift */; };
-		B3F4F2F31E4AA18500E65A75 /* AccountDetailsTransactionListUseCaseOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F4F2F21E4AA18500E65A75 /* AccountDetailsTransactionListUseCaseOutput.swift */; };
+		B3F4F2F31E4AA18500E65A75 /* TransactionListUseCaseOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F4F2F21E4AA18500E65A75 /* TransactionListUseCaseOutput.swift */; };
 		B3FA9B401D6FEA470076422B /* EntityGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FA9B3F1D6FEA470076422B /* EntityGateway.swift */; };
 		B3FA9B421D6FEAE50076422B /* TransactionEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FA9B411D6FEAE50076422B /* TransactionEntity.swift */; };
 		B3FA9B441D6FEB440076422B /* EntityGatewayImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FA9B431D6FEB440076422B /* EntityGatewayImpl.swift */; };
-		B3FA9B821D73382D0076422B /* AccountDetailsTransactionListConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FA9B751D73382D0076422B /* AccountDetailsTransactionListConnector.swift */; };
-		B3FA9B851D73382D0076422B /* AccountDetailsTransactionListUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FA9B7A1D73382D0076422B /* AccountDetailsTransactionListUseCase.swift */; };
-		B3FA9B861D73382D0076422B /* AccountDetailsTransactionListOneSourceUseCaseTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FA9B7B1D73382D0076422B /* AccountDetailsTransactionListOneSourceUseCaseTransformer.swift */; };
-		B3FA9B871D73382D0076422B /* AccountDetailsTransactionListTwoSourceUseCaseTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FA9B7C1D73382D0076422B /* AccountDetailsTransactionListTwoSourceUseCaseTransformer.swift */; };
-		B3FA9B8A1D73382D0076422B /* AccountDetailsTransactionListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FA9B801D73382D0076422B /* AccountDetailsTransactionListViewController.swift */; };
+		B3FA9B821D73382D0076422B /* TransactionListConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FA9B751D73382D0076422B /* TransactionListConnector.swift */; };
+		B3FA9B851D73382D0076422B /* TransactionListUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FA9B7A1D73382D0076422B /* TransactionListUseCase.swift */; };
+		B3FA9B861D73382D0076422B /* TransactionListOneSourceUseCaseTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FA9B7B1D73382D0076422B /* TransactionListOneSourceUseCaseTransformer.swift */; };
+		B3FA9B871D73382D0076422B /* TransactionListTwoSourceUseCaseTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FA9B7C1D73382D0076422B /* TransactionListTwoSourceUseCaseTransformer.swift */; };
+		B3FA9B8A1D73382D0076422B /* TransactionListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FA9B801D73382D0076422B /* TransactionListViewController.swift */; };
 		B3FA9B8C1D7338420076422B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3FA9B8B1D7338420076422B /* Main.storyboard */; };
 		B3FA9B8E1D73385B0076422B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FA9B8D1D73385B0076422B /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		B31212201E4AB3CD0050EBB9 /* AccountDetailsTransactionListPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountDetailsTransactionListPresenter.swift; sourceTree = "<group>"; };
-		B31212211E4AB3CD0050EBB9 /* AccountDetailsTransactionListPresenterOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountDetailsTransactionListPresenterOutput.swift; sourceTree = "<group>"; };
-		B312122C1E4ABA730050EBB9 /* AccountDetailsTransactionListAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountDetailsTransactionListAdapter.swift; sourceTree = "<group>"; };
+		B31212201E4AB3CD0050EBB9 /* TransactionListPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionListPresenter.swift; sourceTree = "<group>"; };
+		B31212211E4AB3CD0050EBB9 /* TransactionListPresenterOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionListPresenterOutput.swift; sourceTree = "<group>"; };
+		B312122C1E4ABA730050EBB9 /* TransactionListAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionListAdapter.swift; sourceTree = "<group>"; };
 		B313A8881D6E97F200A6F508 /* CleanReportTableDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CleanReportTableDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B313A8921D6E97F200A6F508 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B313A8951D6E97F200A6F508 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B313A8971D6E97F200A6F508 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B331C3291E9C3DB200344D09 /* AccountDetailsTransactionListGrandFooterCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountDetailsTransactionListGrandFooterCell.swift; sourceTree = "<group>"; };
-		B34F7A421E7763710059252C /* AccountDetailsTransactionListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountDetailsTransactionListCell.swift; sourceTree = "<group>"; };
-		B34F7A441E7763AF0059252C /* AccountDetailsTransactionListHeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountDetailsTransactionListHeaderCell.swift; sourceTree = "<group>"; };
-		B34F7A461E7763F80059252C /* AccountDetailsTransactionListSubheaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountDetailsTransactionListSubheaderCell.swift; sourceTree = "<group>"; };
-		B34F7A481E7764B30059252C /* AccountDetailsTransactionListDetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountDetailsTransactionListDetailCell.swift; sourceTree = "<group>"; };
-		B34F7A4A1E7764E40059252C /* AccountDetailsTransactionListSubfooterCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountDetailsTransactionListSubfooterCell.swift; sourceTree = "<group>"; };
-		B34F7A4C1E7765320059252C /* AccountDetailsTransactionListFooterCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountDetailsTransactionListFooterCell.swift; sourceTree = "<group>"; };
-		B34F7A4E1E77656A0059252C /* AccountDetailsTransactionListMessageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountDetailsTransactionListMessageCell.swift; sourceTree = "<group>"; };
+		B331C3291E9C3DB200344D09 /* TransactionListGrandFooterCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionListGrandFooterCell.swift; sourceTree = "<group>"; };
+		B34F7A421E7763710059252C /* TransactionListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionListCell.swift; sourceTree = "<group>"; };
+		B34F7A441E7763AF0059252C /* TransactionListHeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionListHeaderCell.swift; sourceTree = "<group>"; };
+		B34F7A461E7763F80059252C /* TransactionListSubheaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionListSubheaderCell.swift; sourceTree = "<group>"; };
+		B34F7A481E7764B30059252C /* TransactionListDetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionListDetailCell.swift; sourceTree = "<group>"; };
+		B34F7A4A1E7764E40059252C /* TransactionListSubfooterCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionListSubfooterCell.swift; sourceTree = "<group>"; };
+		B34F7A4C1E7765320059252C /* TransactionListFooterCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionListFooterCell.swift; sourceTree = "<group>"; };
+		B34F7A4E1E77656A0059252C /* TransactionListMessageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionListMessageCell.swift; sourceTree = "<group>"; };
 		B34F7A631E7809640059252C /* TransactionGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionGroup.swift; sourceTree = "<group>"; };
 		B3721B9E1E860BCC0016D404 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
-		B3F4F2F21E4AA18500E65A75 /* AccountDetailsTransactionListUseCaseOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountDetailsTransactionListUseCaseOutput.swift; sourceTree = "<group>"; };
+		B3F4F2F21E4AA18500E65A75 /* TransactionListUseCaseOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionListUseCaseOutput.swift; sourceTree = "<group>"; };
 		B3FA9B3F1D6FEA470076422B /* EntityGateway.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntityGateway.swift; sourceTree = "<group>"; };
 		B3FA9B411D6FEAE50076422B /* TransactionEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionEntity.swift; sourceTree = "<group>"; };
 		B3FA9B431D6FEB440076422B /* EntityGatewayImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntityGatewayImpl.swift; sourceTree = "<group>"; };
-		B3FA9B751D73382D0076422B /* AccountDetailsTransactionListConnector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountDetailsTransactionListConnector.swift; sourceTree = "<group>"; };
-		B3FA9B7A1D73382D0076422B /* AccountDetailsTransactionListUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountDetailsTransactionListUseCase.swift; sourceTree = "<group>"; };
-		B3FA9B7B1D73382D0076422B /* AccountDetailsTransactionListOneSourceUseCaseTransformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountDetailsTransactionListOneSourceUseCaseTransformer.swift; sourceTree = "<group>"; };
-		B3FA9B7C1D73382D0076422B /* AccountDetailsTransactionListTwoSourceUseCaseTransformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountDetailsTransactionListTwoSourceUseCaseTransformer.swift; sourceTree = "<group>"; };
-		B3FA9B801D73382D0076422B /* AccountDetailsTransactionListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountDetailsTransactionListViewController.swift; sourceTree = "<group>"; };
+		B3FA9B751D73382D0076422B /* TransactionListConnector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionListConnector.swift; sourceTree = "<group>"; };
+		B3FA9B7A1D73382D0076422B /* TransactionListUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionListUseCase.swift; sourceTree = "<group>"; };
+		B3FA9B7B1D73382D0076422B /* TransactionListOneSourceUseCaseTransformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionListOneSourceUseCaseTransformer.swift; sourceTree = "<group>"; };
+		B3FA9B7C1D73382D0076422B /* TransactionListTwoSourceUseCaseTransformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionListTwoSourceUseCaseTransformer.swift; sourceTree = "<group>"; };
+		B3FA9B801D73382D0076422B /* TransactionListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionListViewController.swift; sourceTree = "<group>"; };
 		B3FA9B8B1D7338420076422B /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		B3FA9B8D1D73385B0076422B /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -80,8 +80,8 @@
 		B312121E1E4AB3CD0050EBB9 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
-				B31212201E4AB3CD0050EBB9 /* AccountDetailsTransactionListPresenter.swift */,
-				B31212211E4AB3CD0050EBB9 /* AccountDetailsTransactionListPresenterOutput.swift */,
+				B31212201E4AB3CD0050EBB9 /* TransactionListPresenter.swift */,
+				B31212211E4AB3CD0050EBB9 /* TransactionListPresenterOutput.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -120,14 +120,14 @@
 		B34F7A3A1E7762A50059252C /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				B34F7A421E7763710059252C /* AccountDetailsTransactionListCell.swift */,
-				B34F7A441E7763AF0059252C /* AccountDetailsTransactionListHeaderCell.swift */,
-				B34F7A461E7763F80059252C /* AccountDetailsTransactionListSubheaderCell.swift */,
-				B34F7A481E7764B30059252C /* AccountDetailsTransactionListDetailCell.swift */,
-				B34F7A4A1E7764E40059252C /* AccountDetailsTransactionListSubfooterCell.swift */,
-				B34F7A4C1E7765320059252C /* AccountDetailsTransactionListFooterCell.swift */,
-				B34F7A4E1E77656A0059252C /* AccountDetailsTransactionListMessageCell.swift */,
-				B331C3291E9C3DB200344D09 /* AccountDetailsTransactionListGrandFooterCell.swift */,
+				B34F7A421E7763710059252C /* TransactionListCell.swift */,
+				B34F7A441E7763AF0059252C /* TransactionListHeaderCell.swift */,
+				B34F7A461E7763F80059252C /* TransactionListSubheaderCell.swift */,
+				B34F7A481E7764B30059252C /* TransactionListDetailCell.swift */,
+				B34F7A4A1E7764E40059252C /* TransactionListSubfooterCell.swift */,
+				B34F7A4C1E7765320059252C /* TransactionListFooterCell.swift */,
+				B34F7A4E1E77656A0059252C /* TransactionListMessageCell.swift */,
+				B331C3291E9C3DB200344D09 /* TransactionListGrandFooterCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -173,7 +173,7 @@
 		B3FA9B741D73382D0076422B /* Connector */ = {
 			isa = PBXGroup;
 			children = (
-				B3FA9B751D73382D0076422B /* AccountDetailsTransactionListConnector.swift */,
+				B3FA9B751D73382D0076422B /* TransactionListConnector.swift */,
 			);
 			path = Connector;
 			sourceTree = "<group>";
@@ -181,10 +181,10 @@
 		B3FA9B791D73382D0076422B /* UseCase */ = {
 			isa = PBXGroup;
 			children = (
-				B3F4F2F21E4AA18500E65A75 /* AccountDetailsTransactionListUseCaseOutput.swift */,
-				B3FA9B7A1D73382D0076422B /* AccountDetailsTransactionListUseCase.swift */,
-				B3FA9B7B1D73382D0076422B /* AccountDetailsTransactionListOneSourceUseCaseTransformer.swift */,
-				B3FA9B7C1D73382D0076422B /* AccountDetailsTransactionListTwoSourceUseCaseTransformer.swift */,
+				B3F4F2F21E4AA18500E65A75 /* TransactionListUseCaseOutput.swift */,
+				B3FA9B7A1D73382D0076422B /* TransactionListUseCase.swift */,
+				B3FA9B7B1D73382D0076422B /* TransactionListOneSourceUseCaseTransformer.swift */,
+				B3FA9B7C1D73382D0076422B /* TransactionListTwoSourceUseCaseTransformer.swift */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -192,8 +192,8 @@
 		B3FA9B7D1D73382D0076422B /* View */ = {
 			isa = PBXGroup;
 			children = (
-				B3FA9B801D73382D0076422B /* AccountDetailsTransactionListViewController.swift */,
-				B312122C1E4ABA730050EBB9 /* AccountDetailsTransactionListAdapter.swift */,
+				B3FA9B801D73382D0076422B /* TransactionListViewController.swift */,
+				B312122C1E4ABA730050EBB9 /* TransactionListAdapter.swift */,
 				B34F7A3A1E7762A50059252C /* Cells */,
 			);
 			path = View;
@@ -272,29 +272,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B3FA9B8A1D73382D0076422B /* AccountDetailsTransactionListViewController.swift in Sources */,
-				B3F4F2F31E4AA18500E65A75 /* AccountDetailsTransactionListUseCaseOutput.swift in Sources */,
-				B31212231E4AB3CD0050EBB9 /* AccountDetailsTransactionListPresenter.swift in Sources */,
+				B3FA9B8A1D73382D0076422B /* TransactionListViewController.swift in Sources */,
+				B3F4F2F31E4AA18500E65A75 /* TransactionListUseCaseOutput.swift in Sources */,
+				B31212231E4AB3CD0050EBB9 /* TransactionListPresenter.swift in Sources */,
 				B3FA9B441D6FEB440076422B /* EntityGatewayImpl.swift in Sources */,
 				B3FA9B8E1D73385B0076422B /* AppDelegate.swift in Sources */,
-				B3FA9B861D73382D0076422B /* AccountDetailsTransactionListOneSourceUseCaseTransformer.swift in Sources */,
-				B34F7A451E7763AF0059252C /* AccountDetailsTransactionListHeaderCell.swift in Sources */,
-				B331C32B1E9C3E7A00344D09 /* AccountDetailsTransactionListGrandFooterCell.swift in Sources */,
-				B34F7A4F1E77656A0059252C /* AccountDetailsTransactionListMessageCell.swift in Sources */,
-				B31212241E4AB3CD0050EBB9 /* AccountDetailsTransactionListPresenterOutput.swift in Sources */,
-				B34F7A431E7763710059252C /* AccountDetailsTransactionListCell.swift in Sources */,
-				B34F7A4B1E7764E40059252C /* AccountDetailsTransactionListSubfooterCell.swift in Sources */,
-				B3FA9B851D73382D0076422B /* AccountDetailsTransactionListUseCase.swift in Sources */,
-				B3FA9B871D73382D0076422B /* AccountDetailsTransactionListTwoSourceUseCaseTransformer.swift in Sources */,
+				B3FA9B861D73382D0076422B /* TransactionListOneSourceUseCaseTransformer.swift in Sources */,
+				B34F7A451E7763AF0059252C /* TransactionListHeaderCell.swift in Sources */,
+				B331C32B1E9C3E7A00344D09 /* TransactionListGrandFooterCell.swift in Sources */,
+				B34F7A4F1E77656A0059252C /* TransactionListMessageCell.swift in Sources */,
+				B31212241E4AB3CD0050EBB9 /* TransactionListPresenterOutput.swift in Sources */,
+				B34F7A431E7763710059252C /* TransactionListCell.swift in Sources */,
+				B34F7A4B1E7764E40059252C /* TransactionListSubfooterCell.swift in Sources */,
+				B3FA9B851D73382D0076422B /* TransactionListUseCase.swift in Sources */,
+				B3FA9B871D73382D0076422B /* TransactionListTwoSourceUseCaseTransformer.swift in Sources */,
 				B3721B9F1E860BCC0016D404 /* Color.swift in Sources */,
-				B34F7A491E7764B30059252C /* AccountDetailsTransactionListDetailCell.swift in Sources */,
+				B34F7A491E7764B30059252C /* TransactionListDetailCell.swift in Sources */,
 				B3FA9B401D6FEA470076422B /* EntityGateway.swift in Sources */,
 				B34F7A641E7809640059252C /* TransactionGroup.swift in Sources */,
-				B312122D1E4ABA730050EBB9 /* AccountDetailsTransactionListAdapter.swift in Sources */,
-				B34F7A471E7763F80059252C /* AccountDetailsTransactionListSubheaderCell.swift in Sources */,
+				B312122D1E4ABA730050EBB9 /* TransactionListAdapter.swift in Sources */,
+				B34F7A471E7763F80059252C /* TransactionListSubheaderCell.swift in Sources */,
 				B3FA9B421D6FEAE50076422B /* TransactionEntity.swift in Sources */,
-				B3FA9B821D73382D0076422B /* AccountDetailsTransactionListConnector.swift in Sources */,
-				B34F7A4D1E7765330059252C /* AccountDetailsTransactionListFooterCell.swift in Sources */,
+				B3FA9B821D73382D0076422B /* TransactionListConnector.swift in Sources */,
+				B34F7A4D1E7765330059252C /* TransactionListFooterCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

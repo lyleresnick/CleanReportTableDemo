@@ -2,11 +2,11 @@
 
 import UIKit
 
-class GrandFooterCell: UITableViewCell, AccountDetailsTransactionListCell {
+class TransactionListGrandFooterCell: UITableViewCell, TransactionListCell {
     
-    @IBOutlet fileprivate var totalLabel: UILabel!
+    @IBOutlet private var totalLabel: UILabel!
     
-    func show(row: AccountDetailsTransactionListViewModel) {
+    func show(row: TransactionListViewModel) {
         
         guard case let .grandfooter(total) = row else { fatalError("Expected: grandfooter") }
         totalLabel.text = total

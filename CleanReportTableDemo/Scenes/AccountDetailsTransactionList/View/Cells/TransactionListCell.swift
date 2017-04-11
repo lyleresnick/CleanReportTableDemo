@@ -3,12 +3,12 @@
 
 import UIKit
 
-protocol AccountDetailsTransactionListCell {
-    func show( row: AccountDetailsTransactionListViewModel )
+protocol TransactionListCell {
+    func show( row: TransactionListViewModel )
 }
 
 
-extension AccountDetailsTransactionListCell where Self: UITableViewCell {
+extension TransactionListCell where Self: UITableViewCell {
     
     func setBackgroundColour(odd: Bool ) {
         

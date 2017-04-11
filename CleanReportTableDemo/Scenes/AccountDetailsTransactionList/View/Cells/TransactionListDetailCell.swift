@@ -2,12 +2,12 @@
 
 import UIKit
 
-class AccountDetailsTransactionListDetailCell: UITableViewCell, AccountDetailsTransactionListCell {
+class TransactionListDetailCell: UITableViewCell, TransactionListCell {
     
     @IBOutlet private var descriptionLabel: UILabel!
     @IBOutlet private var amountLabel: UILabel!
     
-    func show(row: AccountDetailsTransactionListViewModel) {
+    func show(row: TransactionListViewModel) {
         
         guard case let .detail( description, amount, odd ) = row else { fatalError("Expected: detail") }
         descriptionLabel.text = description

@@ -2,9 +2,9 @@
 
 import UIKit
 
-class AccountDetailsTransactionListPresenter {
+class TransactionListPresenter {
     
-    weak var viewController: AccountDetailsTransactionListPresenterOutput!
+    weak var viewController: TransactionListPresenterOutput!
     
     fileprivate static func dateFormat(format: String) -> DateFormatter {
         let formatter = DateFormatter()
@@ -14,12 +14,12 @@ class AccountDetailsTransactionListPresenter {
     
     fileprivate static let outboundDateFormat = dateFormat(format: "MMM' 'dd', 'yyyy")
     
-    fileprivate var rows = [AccountDetailsTransactionListViewModel]()
+    fileprivate var rows = [TransactionListViewModel]()
     fileprivate var odd = false
     
-    fileprivate let useCase: AccountDetailsTransactionListUseCase
+    fileprivate let useCase: TransactionListUseCase
     
-    init(useCase: AccountDetailsTransactionListUseCase) {
+    init(useCase: TransactionListUseCase) {
         self.useCase = useCase
     }
 
@@ -37,12 +37,12 @@ class AccountDetailsTransactionListPresenter {
     
     var rowCount: Int { return rows.count }
     
-    func row(at index: Int) -> AccountDetailsTransactionListViewModel { return rows[ index ] }
+    func row(at index: Int) -> TransactionListViewModel { return rows[ index ] }
 }
 
-// MARK: AccountDetailsTransactionListPresenterProtocol
+// MARK: TransactionListPresenterProtocol
 
-extension AccountDetailsTransactionListPresenter: AccountDetailsTransactionListUseCaseOutput {
+extension TransactionListPresenter: TransactionListUseCaseOutput {
     
     
     func presentInit() {
@@ -65,7 +65,7 @@ extension AccountDetailsTransactionListPresenter: AccountDetailsTransactionListU
     }
     
     fileprivate func formatDate(date: Date) -> String {
-        return AccountDetailsTransactionListPresenter.outboundDateFormat.string(from: date)
+        return TransactionListPresenter.outboundDateFormat.string(from: date)
     }
     
     func presentDetail(description: String, amount: Double) {
@@ -97,7 +97,7 @@ extension AccountDetailsTransactionListPresenter: AccountDetailsTransactionListU
 
 //MARK: extension
 
-private extension AccountDetailsTransactionListViewModel {
+private extension TransactionListViewModel {
     
     private enum Cell: String {
         case header

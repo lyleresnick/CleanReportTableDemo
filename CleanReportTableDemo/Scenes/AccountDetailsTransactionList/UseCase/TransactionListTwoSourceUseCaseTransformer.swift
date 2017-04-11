@@ -3,7 +3,7 @@
 import Foundation
 
 
-class AccountDetailsTransactionListTwoSourceUseCaseTransformer {
+class TransactionListTwoSourceUseCaseTransformer {
     
     typealias Group = TransactionGroup
     private let entityGateway: EntityGateway
@@ -12,7 +12,7 @@ class AccountDetailsTransactionListTwoSourceUseCaseTransformer {
         self.entityGateway = entityGateway
     }
     
-    func transform(presenter: AccountDetailsTransactionListUseCaseOutput) {
+    func transform(presenter: TransactionListUseCaseOutput) {
         
         presenter.presentInit()
         var grandTotal = 0.0
@@ -23,7 +23,7 @@ class AccountDetailsTransactionListTwoSourceUseCaseTransformer {
         presenter.presentReport()
     }
 
-    private func transform(source: [TransactionEntity]?, group: Group, presenter: AccountDetailsTransactionListUseCaseOutput) -> Double {
+    private func transform(source: [TransactionEntity]?, group: Group, presenter: TransactionListUseCaseOutput) -> Double {
         
         var total = 0.0
 

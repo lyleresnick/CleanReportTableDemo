@@ -2,11 +2,11 @@
 
 import UIKit
 
-class AccountDetailsTransactionListMessageCell: UITableViewCell, AccountDetailsTransactionListCell {
+class TransactionListMessageCell: UITableViewCell, TransactionListCell {
     
     @IBOutlet private var messageLabel: UILabel!
     
-    func show(row: AccountDetailsTransactionListViewModel) {
+    func show(row: TransactionListViewModel) {
         
         guard case let .message( message ) = row else { fatalError("Expected: message") }
         messageLabel.text = message

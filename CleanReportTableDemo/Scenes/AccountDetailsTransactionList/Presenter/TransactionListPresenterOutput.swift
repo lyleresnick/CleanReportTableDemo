@@ -2,11 +2,11 @@
 
 import Foundation
 
-protocol AccountDetailsTransactionListPresenterOutput: class {
+protocol TransactionListPresenterOutput: class {
     func showReport()
 }
 
-enum AccountDetailsTransactionListViewModel {
+enum TransactionListViewModel {
     case header(title: String)
     case subheader(title: String, odd: Bool)
     case detail(description: String, amount: String, odd: Bool)

@@ -2,11 +2,11 @@
 
 import UIKit
 
-class AccountDetailsTransactionListFooterCell: UITableViewCell, AccountDetailsTransactionListCell {
+class TransactionListFooterCell: UITableViewCell, TransactionListCell {
     
     @IBOutlet private var totalLabel: UILabel!
     
-    func show(row: AccountDetailsTransactionListViewModel) {
+    func show(row: TransactionListViewModel) {
         
         guard case let .footer(total, odd) = row else { fatalError("Expected: footer") }
         totalLabel.text = total

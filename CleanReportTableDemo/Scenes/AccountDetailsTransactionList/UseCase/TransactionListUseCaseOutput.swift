@@ -2,7 +2,7 @@
 
 import Foundation
 
-protocol AccountDetailsTransactionListUseCaseOutput: class {
+protocol TransactionListUseCaseOutput: class {
     
     func presentInit()
     func presentHeader(group: TransactionGroup)

@@ -3,7 +3,7 @@
 import Foundation
 
 
-class AccountDetailsTransactionListOneSourceUseCaseTransformer {
+class TransactionListOneSourceUseCaseTransformer {
     
     private let entityGateway: EntityGateway
     
@@ -11,7 +11,7 @@ class AccountDetailsTransactionListOneSourceUseCaseTransformer {
         self.entityGateway = entityGateway
     }
     
-    func transform(presenter: AccountDetailsTransactionListUseCaseOutput) {
+    func transform(presenter: TransactionListUseCaseOutput) {
         
         var groupStream = ([.Authorized, .Posted] as [TransactionGroup]).makeIterator()
         var currentGroup = groupStream.next()

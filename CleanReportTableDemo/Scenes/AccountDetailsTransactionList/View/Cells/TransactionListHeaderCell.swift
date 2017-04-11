@@ -2,11 +2,11 @@
 
 import UIKit
 
-class AccountDetailsTransactionListHeaderCell: UITableViewCell, AccountDetailsTransactionListCell {
+class TransactionListHeaderCell: UITableViewCell, TransactionListCell {
     
     @IBOutlet private var titleLabel: UILabel!
     
-    func show(row: AccountDetailsTransactionListViewModel) {
+    func show(row: TransactionListViewModel) {
         
         guard case let .header(title) = row else { fatalError("Expected: header") }
         titleLabel.text = title

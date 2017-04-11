@@ -3,9 +3,9 @@
 import Foundation
 
 
-class AccountDetailsTransactionListUseCase {
+class TransactionListUseCase {
 
-    weak var presenter: AccountDetailsTransactionListUseCaseOutput!
+    weak var presenter: TransactionListUseCaseOutput!
     private let entityGateway: EntityGateway
     
     init(entityGateway: EntityGateway) {
@@ -14,12 +14,12 @@ class AccountDetailsTransactionListUseCase {
     
 
     func beginTwoSource() {
-        let transformer = AccountDetailsTransactionListTwoSourceUseCaseTransformer(entityGateway: entityGateway)
+        let transformer = TransactionListTwoSourceUseCaseTransformer(entityGateway: entityGateway)
         transformer.transform(presenter: presenter)
     }
     
     func beginOneSource() {
-        let transformer = AccountDetailsTransactionListOneSourceUseCaseTransformer(entityGateway: entityGateway)
+        let transformer = TransactionListOneSourceUseCaseTransformer(entityGateway: entityGateway)
         transformer.transform(presenter: presenter)
     }
     

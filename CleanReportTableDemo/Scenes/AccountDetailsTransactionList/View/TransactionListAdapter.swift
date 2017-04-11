@@ -2,14 +2,14 @@
 
 import UIKit
 
-class AccountDetailsTransactionListAdapter: NSObject {
+class TransactionListAdapter: NSObject {
     
-    var presenter: AccountDetailsTransactionListPresenter!
+    var presenter: TransactionListPresenter!
     
 }
 
 // MARK: UITableViewDataSource
-extension AccountDetailsTransactionListAdapter: UITableViewDataSource  {
+extension TransactionListAdapter: UITableViewDataSource  {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return presenter.rowCount
@@ -18,13 +18,13 @@ extension AccountDetailsTransactionListAdapter: UITableViewDataSource  {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: presenter.cellId(at: indexPath.row), for: indexPath)
-        (cell as! AccountDetailsTransactionListCell).show(row: presenter.row(at: indexPath.row))
+        (cell as! TransactionListCell).show(row: presenter.row(at: indexPath.row))
         return cell
     }
 }
 
 // MARK: UITableViewDelegate
-extension AccountDetailsTransactionListAdapter: UITableViewDelegate {
+extension TransactionListAdapter: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return presenter.cellHeight(at: indexPath.row)
