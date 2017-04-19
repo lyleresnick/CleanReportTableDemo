@@ -13,59 +13,60 @@ class TransactionListOneSourceUseCaseTransformer {
     
     func transform(presenter: TransactionListUseCaseOutput) {
         
-        var groupStream = ([.Authorized, .Posted] as [TransactionGroup]).makeIterator()
-        var currentGroup = groupStream.next()
-        
-        
-        guard let allData = entityGateway.fetchAllTransactions() else {
+        var grandTotal = 0.0
+        presenter.presentInit()
+
+        if let allData = entityGateway.fetchAllTransactions() {
+
+            var groupStream = ([.Authorized, .Posted] as [TransactionGroup]).makeIterator()
+            var currentGroup = groupStream.next()
+
+            var transactionStream = allData.makeIterator()
+            var transaction = transactionStream.next()
+            
+            var minGroup = determineMinGroup(group: currentGroup, transaction: transaction)
+            
+            while let localMinGroup = minGroup {
+
+                presenter.presentHeader(group: localMinGroup)
+                
+                if (transaction == nil) || (localMinGroup != transaction!.group) {
+                    
+                    presenter.presentNoTransactionsMessage(group: localMinGroup)
+                    currentGroup = groupStream.next()
+                    minGroup = determineMinGroup(group: currentGroup, transaction: transaction)
+                }
+                else {
+                    var total = 0.0
+                    
+                    while let localTransaction = transaction, localTransaction.group == localMinGroup {
+                        
+                        let currentDate = localTransaction.date
+                        presenter.presentSubheader(date: currentDate)
+                        
+                        while let localTransaction = transaction,
+                              (localTransaction.group == localMinGroup) && (localTransaction.date == currentDate) {
+                            
+                            let amount = localTransaction.amount
+                            total += amount
+                            grandTotal += amount
+                            presenter.presentDetail(description: localTransaction.description, amount: amount)
+                            
+                            transaction = transactionStream.next()
+                        }
+                        presenter.presentSubfooter()
+                    }
+                    presenter.presentFooter(total: total)
+                    currentGroup = groupStream.next()
+                    minGroup = determineMinGroup(group: currentGroup, transaction: transaction)
+                }
+            }
+        }
+        else {
             presenter.presentHeader(group: .Authorized)
             presenter.presentNotFoundMessage( group: .Authorized)
             presenter.presentHeader(group: .Posted)
             presenter.presentNotFoundMessage( group: .Posted)
-            return
-        }
-        var transactionStream = allData.makeIterator()
-        var currentTransaction = transactionStream.next()
-        
-        var minGroup = determineMinGroup(group: currentGroup, transaction: currentTransaction)
-        
-        presenter.presentInit()
-
-        var grandTotal = 0.0
-        while let localMinGroup = minGroup {
-
-            presenter.presentHeader(group: localMinGroup)
-            
-            if (currentTransaction == nil) || (localMinGroup != currentTransaction!.group) {
-                
-                presenter.presentNoTransactionsMessage(group: localMinGroup)
-                currentGroup = groupStream.next()
-                minGroup = determineMinGroup(group: currentGroup, transaction: currentTransaction)
-            }
-            else {
-                var total = 0.0
-                
-                while let localCurrentTransaction = currentTransaction, localCurrentTransaction.group == localMinGroup {
-                    
-                    let currentDate = localCurrentTransaction.date
-                    presenter.presentSubheader(date: currentDate)
-                    
-                    while let localCurrentTransaction = currentTransaction,
-                          (localCurrentTransaction.group == localMinGroup) && (localCurrentTransaction.date == currentDate) {
-                        
-                        let amount = localCurrentTransaction.amount
-                        total += amount
-                        grandTotal += amount
-                        presenter.presentDetail(description: localCurrentTransaction.description, amount: amount)
-                        
-                        currentTransaction = transactionStream.next()
-                    }
-                    presenter.presentSubfooter()
-                }
-                presenter.presentFooter(total: total)
-                currentGroup = groupStream.next()
-                minGroup = determineMinGroup(group: currentGroup, transaction: currentTransaction)
-            }
         }
         presenter.presentGrandFooter(grandTotal: grandTotal)
         presenter.presentReport()

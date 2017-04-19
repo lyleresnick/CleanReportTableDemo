@@ -29,32 +29,36 @@ class TransactionListTwoSourceUseCaseTransformer {
 
         presenter.presentHeader(group: group)
         
-        guard let source = source else {
-            presenter.presentNotFoundMessage(group: group)
-            return 0.0
-        }
-        guard source.count != 0 else {
-            presenter.presentNoTransactionsMessage(group: group)
-            return 0.0
-        }
-        var transactionStream = source.makeIterator()
-        var currentTransaction = transactionStream.next()
-        
-        while let localCurrentTransaction = currentTransaction {
-            
-            let currentDate = localCurrentTransaction.date
-            presenter.presentSubheader(date: currentDate)
-            
-            while let localCurrentTransaction = currentTransaction,
-                  localCurrentTransaction.date == currentDate {
-                
-                total += localCurrentTransaction.amount
-                presenter.presentDetail(description: localCurrentTransaction.description, amount: localCurrentTransaction.amount)
-                currentTransaction = transactionStream.next()
+        if let source = source {
+
+            if source.count == 0 {
+                presenter.presentNoTransactionsMessage(group: group)
             }
-            presenter.presentSubfooter()
+            else {
+                var transactionStream = source.makeIterator()
+                var transaction = transactionStream.next()
+                
+                while let localTransaction = transaction {
+                    
+                    let currentDate = localTransaction.date
+                    presenter.presentSubheader(date: currentDate)
+                    
+                    while let localTransaction = transaction,
+                          localTransaction.date == currentDate {
+                        
+                        total += localTransaction.amount
+                        presenter.presentDetail(description: localTransaction.description, amount: localTransaction.amount)
+                        transaction = transactionStream.next()
+                    }
+                    presenter.presentSubfooter()
+                }
+                presenter.presentFooter(total: total)
+            }
         }
-        presenter.presentFooter(total: total)
+        else {
+            presenter.presentNotFoundMessage(group: group)
+        }
+
         return total
     }
 }
