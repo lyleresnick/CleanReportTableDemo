@@ -7,15 +7,15 @@ import Foundation
 
 class EntityGatewayImpl: EntityGateway {
     
-    func fetchAllTransactions() -> [TransactionEntity] {
+    func fetchAllTransactions() -> [TransactionEntity]? {
         return TransactionEntity.allData
     }
     
-    func fetchAuthorizedTransactions() -> [TransactionEntity] {
+    func fetchAuthorizedTransactions() -> [TransactionEntity]? {
         return TransactionEntity.authorizedData
     }
     
-    func fetchPostedTransactions() -> [TransactionEntity] {
+    func fetchPostedTransactions() -> [TransactionEntity]? {
         return TransactionEntity.postedData
     }
     

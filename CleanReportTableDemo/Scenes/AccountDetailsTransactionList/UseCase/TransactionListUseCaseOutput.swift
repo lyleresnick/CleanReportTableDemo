@@ -12,6 +12,7 @@ protocol TransactionListUseCaseOutput: class {
     func presentFooter(total: Double)
     func presentGrandFooter(grandTotal: Double)
     func presentNotFoundMessage(group: TransactionGroup)
+    func presentNoTransactionsMessage(group: TransactionGroup)
     
     func presentReport()
 }

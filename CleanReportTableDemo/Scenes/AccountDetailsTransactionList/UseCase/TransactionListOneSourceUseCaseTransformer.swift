@@ -16,7 +16,15 @@ class TransactionListOneSourceUseCaseTransformer {
         var groupStream = ([.Authorized, .Posted] as [TransactionGroup]).makeIterator()
         var currentGroup = groupStream.next()
         
-        var transactionStream = entityGateway.fetchAllTransactions().makeIterator()
+        
+        guard let allData = entityGateway.fetchAllTransactions() else {
+            presenter.presentHeader(group: .Authorized)
+            presenter.presentNotFoundMessage( group: .Authorized)
+            presenter.presentHeader(group: .Posted)
+            presenter.presentNotFoundMessage( group: .Posted)
+            return
+        }
+        var transactionStream = allData.makeIterator()
         var currentTransaction = transactionStream.next()
         
         var minGroup = determineMinGroup(group: currentGroup, transaction: currentTransaction)
@@ -30,7 +38,7 @@ class TransactionListOneSourceUseCaseTransformer {
             
             if (currentTransaction == nil) || (localMinGroup != currentTransaction!.group) {
                 
-                presenter.presentNotFoundMessage(group: localMinGroup)
+                presenter.presentNoTransactionsMessage(group: localMinGroup)
                 currentGroup = groupStream.next()
                 minGroup = determineMinGroup(group: currentGroup, transaction: currentTransaction)
             }

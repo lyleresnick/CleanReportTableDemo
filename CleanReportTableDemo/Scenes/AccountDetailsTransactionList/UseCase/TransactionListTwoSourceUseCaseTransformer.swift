@@ -29,8 +29,12 @@ class TransactionListTwoSourceUseCaseTransformer {
 
         presenter.presentHeader(group: group)
         
-        guard let source = source, source.count != 0 else {
+        guard let source = source else {
             presenter.presentNotFoundMessage(group: group)
+            return 0.0
+        }
+        guard source.count != 0 else {
+            presenter.presentNoTransactionsMessage(group: group)
             return 0.0
         }
         var transactionStream = source.makeIterator()
