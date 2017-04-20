@@ -68,7 +68,7 @@ extension TransactionListPresenter: TransactionListUseCaseOutput {
     
     func presentDetail(description: String, amount: Double) {
         
-        rows.append(.detail(description: description, amount: String(amount), odd: odd));
+        rows.append(.detail(description: description, amount: amount.asString, odd: odd));
     }
     
     func presentSubfooter() {
@@ -79,12 +79,12 @@ extension TransactionListPresenter: TransactionListUseCaseOutput {
     func presentFooter(total: Double) {
         
         odd = !odd;
-        rows.append(.footer(total: "\(total)", odd: odd));
+        rows.append(.footer(total: total.asString, odd: odd));
     }
     
     func presentGrandFooter(grandTotal: Double) {
         
-        rows.append(.grandfooter(total: "\(grandTotal)"));
+        rows.append(.grandfooter(total: grandTotal.asString));
     }
     
     func presentNotFoundMessage(group: TransactionGroup) {
@@ -98,7 +98,15 @@ extension TransactionListPresenter: TransactionListUseCaseOutput {
     }
 }
 
+
 //MARK: extension
+
+extension Double {
+    var asString: String {
+        return String(format: "%0.2f", self)
+    }
+}
+
 
 private extension TransactionListViewModel {
     
