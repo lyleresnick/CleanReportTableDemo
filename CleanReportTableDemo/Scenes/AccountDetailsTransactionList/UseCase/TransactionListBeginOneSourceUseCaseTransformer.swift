@@ -3,12 +3,12 @@
 import Foundation
 
 
-class TransactionListOneSourceUseCaseTransformer {
+class TransactionListBeginOneSourceUseCaseTransformer {
     
-    private let entityGateway: EntityGateway
+    private let allTransactions: [TransactionEntity]?
     
-    init(entityGateway: EntityGateway) {
-        self.entityGateway = entityGateway
+    init(allTransactions: [TransactionEntity]?) {
+        self.allTransactions = allTransactions
     }
     
     func transform(presenter: TransactionListUseCaseOutput) {
@@ -16,12 +16,12 @@ class TransactionListOneSourceUseCaseTransformer {
         var grandTotal = 0.0
         presenter.presentInit()
 
-        if let allData = entityGateway.fetchAllTransactions() {
+        if let allTransactions = allTransactions {
 
             var groupStream = ([.Authorized, .Posted] as [TransactionGroup]).makeIterator()
             var currentGroup = groupStream.next()
 
-            var transactionStream = allData.makeIterator()
+            var transactionStream = allTransactions.makeIterator()
             var transaction = transactionStream.next()
             
             var minGroup = determineMinGroup(group: currentGroup, transaction: transaction)

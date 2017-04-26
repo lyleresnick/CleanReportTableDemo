@@ -1,6 +1,4 @@
-//  Created by Lyle Resnick on 2016-08-25.
-//  Copyright © 2016 Lyle Resnick. All rights reserved.
-//
+//  Copyright © 2017 Lyle Resnick. All rights reserved.
 
 import Foundation
 
@@ -19,7 +17,8 @@ struct TransactionEntity {
 
     init( group: String, date: String, description: String, amount: String, debit: String ) {
         
-        guard let group = TransactionGroup(rawValue: group) else {
+        guard let group = TransactionGroup(rawValue: group)
+        else {
             fatalError("Format of Group is incorrect")
         }
         self.group = group

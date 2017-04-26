@@ -21,6 +21,7 @@
 		B34F7A4D1E7765330059252C /* TransactionListFooterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34F7A4C1E7765320059252C /* TransactionListFooterCell.swift */; };
 		B34F7A4F1E77656A0059252C /* TransactionListMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34F7A4E1E77656A0059252C /* TransactionListMessageCell.swift */; };
 		B34F7A641E7809640059252C /* TransactionGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34F7A631E7809640059252C /* TransactionGroup.swift */; };
+		B357A1751EB16045005DF42D /* TransactionListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B357A1741EB16045005DF42D /* TransactionListViewModel.swift */; };
 		B3721B9F1E860BCC0016D404 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3721B9E1E860BCC0016D404 /* Color.swift */; };
 		B3F4F2F31E4AA18500E65A75 /* TransactionListUseCaseOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F4F2F21E4AA18500E65A75 /* TransactionListUseCaseOutput.swift */; };
 		B3FA9B401D6FEA470076422B /* EntityGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FA9B3F1D6FEA470076422B /* EntityGateway.swift */; };
@@ -28,8 +29,8 @@
 		B3FA9B441D6FEB440076422B /* EntityGatewayImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FA9B431D6FEB440076422B /* EntityGatewayImpl.swift */; };
 		B3FA9B821D73382D0076422B /* TransactionListConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FA9B751D73382D0076422B /* TransactionListConnector.swift */; };
 		B3FA9B851D73382D0076422B /* TransactionListUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FA9B7A1D73382D0076422B /* TransactionListUseCase.swift */; };
-		B3FA9B861D73382D0076422B /* TransactionListOneSourceUseCaseTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FA9B7B1D73382D0076422B /* TransactionListOneSourceUseCaseTransformer.swift */; };
-		B3FA9B871D73382D0076422B /* TransactionListTwoSourceUseCaseTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FA9B7C1D73382D0076422B /* TransactionListTwoSourceUseCaseTransformer.swift */; };
+		B3FA9B861D73382D0076422B /* TransactionListBeginOneSourceUseCaseTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FA9B7B1D73382D0076422B /* TransactionListBeginOneSourceUseCaseTransformer.swift */; };
+		B3FA9B871D73382D0076422B /* TransactionListBeginTwoSourceUseCaseTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FA9B7C1D73382D0076422B /* TransactionListBeginTwoSourceUseCaseTransformer.swift */; };
 		B3FA9B8A1D73382D0076422B /* TransactionListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FA9B801D73382D0076422B /* TransactionListViewController.swift */; };
 		B3FA9B8C1D7338420076422B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3FA9B8B1D7338420076422B /* Main.storyboard */; };
 		B3FA9B8E1D73385B0076422B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FA9B8D1D73385B0076422B /* AppDelegate.swift */; };
@@ -52,6 +53,7 @@
 		B34F7A4C1E7765320059252C /* TransactionListFooterCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionListFooterCell.swift; sourceTree = "<group>"; };
 		B34F7A4E1E77656A0059252C /* TransactionListMessageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionListMessageCell.swift; sourceTree = "<group>"; };
 		B34F7A631E7809640059252C /* TransactionGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionGroup.swift; sourceTree = "<group>"; };
+		B357A1741EB16045005DF42D /* TransactionListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionListViewModel.swift; sourceTree = "<group>"; };
 		B3721B9E1E860BCC0016D404 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		B3F4F2F21E4AA18500E65A75 /* TransactionListUseCaseOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionListUseCaseOutput.swift; sourceTree = "<group>"; };
 		B3FA9B3F1D6FEA470076422B /* EntityGateway.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntityGateway.swift; sourceTree = "<group>"; };
@@ -59,8 +61,8 @@
 		B3FA9B431D6FEB440076422B /* EntityGatewayImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntityGatewayImpl.swift; sourceTree = "<group>"; };
 		B3FA9B751D73382D0076422B /* TransactionListConnector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionListConnector.swift; sourceTree = "<group>"; };
 		B3FA9B7A1D73382D0076422B /* TransactionListUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionListUseCase.swift; sourceTree = "<group>"; };
-		B3FA9B7B1D73382D0076422B /* TransactionListOneSourceUseCaseTransformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionListOneSourceUseCaseTransformer.swift; sourceTree = "<group>"; };
-		B3FA9B7C1D73382D0076422B /* TransactionListTwoSourceUseCaseTransformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionListTwoSourceUseCaseTransformer.swift; sourceTree = "<group>"; };
+		B3FA9B7B1D73382D0076422B /* TransactionListBeginOneSourceUseCaseTransformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionListBeginOneSourceUseCaseTransformer.swift; sourceTree = "<group>"; };
+		B3FA9B7C1D73382D0076422B /* TransactionListBeginTwoSourceUseCaseTransformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionListBeginTwoSourceUseCaseTransformer.swift; sourceTree = "<group>"; };
 		B3FA9B801D73382D0076422B /* TransactionListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionListViewController.swift; sourceTree = "<group>"; };
 		B3FA9B8B1D7338420076422B /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		B3FA9B8D1D73385B0076422B /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 			children = (
 				B31212201E4AB3CD0050EBB9 /* TransactionListPresenter.swift */,
 				B31212211E4AB3CD0050EBB9 /* TransactionListPresenterOutput.swift */,
+				B357A1741EB16045005DF42D /* TransactionListViewModel.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -126,8 +129,8 @@
 				B34F7A481E7764B30059252C /* TransactionListDetailCell.swift */,
 				B34F7A4A1E7764E40059252C /* TransactionListSubfooterCell.swift */,
 				B34F7A4C1E7765320059252C /* TransactionListFooterCell.swift */,
-				B34F7A4E1E77656A0059252C /* TransactionListMessageCell.swift */,
 				B331C3291E9C3DB200344D09 /* TransactionListGrandFooterCell.swift */,
+				B34F7A4E1E77656A0059252C /* TransactionListMessageCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -183,8 +186,8 @@
 			children = (
 				B3F4F2F21E4AA18500E65A75 /* TransactionListUseCaseOutput.swift */,
 				B3FA9B7A1D73382D0076422B /* TransactionListUseCase.swift */,
-				B3FA9B7B1D73382D0076422B /* TransactionListOneSourceUseCaseTransformer.swift */,
-				B3FA9B7C1D73382D0076422B /* TransactionListTwoSourceUseCaseTransformer.swift */,
+				B3FA9B7B1D73382D0076422B /* TransactionListBeginOneSourceUseCaseTransformer.swift */,
+				B3FA9B7C1D73382D0076422B /* TransactionListBeginTwoSourceUseCaseTransformer.swift */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -277,15 +280,16 @@
 				B31212231E4AB3CD0050EBB9 /* TransactionListPresenter.swift in Sources */,
 				B3FA9B441D6FEB440076422B /* EntityGatewayImpl.swift in Sources */,
 				B3FA9B8E1D73385B0076422B /* AppDelegate.swift in Sources */,
-				B3FA9B861D73382D0076422B /* TransactionListOneSourceUseCaseTransformer.swift in Sources */,
+				B3FA9B861D73382D0076422B /* TransactionListBeginOneSourceUseCaseTransformer.swift in Sources */,
 				B34F7A451E7763AF0059252C /* TransactionListHeaderCell.swift in Sources */,
+				B357A1751EB16045005DF42D /* TransactionListViewModel.swift in Sources */,
 				B331C32B1E9C3E7A00344D09 /* TransactionListGrandFooterCell.swift in Sources */,
 				B34F7A4F1E77656A0059252C /* TransactionListMessageCell.swift in Sources */,
 				B31212241E4AB3CD0050EBB9 /* TransactionListPresenterOutput.swift in Sources */,
 				B34F7A431E7763710059252C /* TransactionListCell.swift in Sources */,
 				B34F7A4B1E7764E40059252C /* TransactionListSubfooterCell.swift in Sources */,
 				B3FA9B851D73382D0076422B /* TransactionListUseCase.swift in Sources */,
-				B3FA9B871D73382D0076422B /* TransactionListTwoSourceUseCaseTransformer.swift in Sources */,
+				B3FA9B871D73382D0076422B /* TransactionListBeginTwoSourceUseCaseTransformer.swift in Sources */,
 				B3721B9F1E860BCC0016D404 /* Color.swift in Sources */,
 				B34F7A491E7764B30059252C /* TransactionListDetailCell.swift in Sources */,
 				B3FA9B401D6FEA470076422B /* EntityGateway.swift in Sources */,

@@ -22,7 +22,7 @@ class TransactionListPresenter {
     }
 
     func viewReady() {
-        useCase.beginTwoSource()
+        useCase.beginOneSource()
     }
     
     func cellId(at index: Int) -> String {
@@ -41,7 +41,6 @@ class TransactionListPresenter {
 // MARK: TransactionListPresenterProtocol
 
 extension TransactionListPresenter: TransactionListUseCaseOutput {
-    
     
     func presentInit() {
         rows.removeAll()

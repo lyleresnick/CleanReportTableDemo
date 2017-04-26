@@ -3,12 +3,14 @@
 import Foundation
 
 
-class TransactionListTwoSourceUseCaseTransformer {
+class TransactionListBeginTwoSourceUseCaseTransformer {
     
-    private let entityGateway: EntityGateway
+    private let authorizedTransactions: [TransactionEntity]?
+    private let postedTransactions: [TransactionEntity]?
     
-    init(entityGateway: EntityGateway) {
-        self.entityGateway = entityGateway
+    init(authorizedTransactions: [TransactionEntity]?, postedTransactions: [TransactionEntity]?) {
+        self.authorizedTransactions = authorizedTransactions
+        self.postedTransactions = postedTransactions
     }
     
     func transform(presenter: TransactionListUseCaseOutput) {
@@ -16,8 +18,8 @@ class TransactionListTwoSourceUseCaseTransformer {
         presenter.presentInit()
 
         var grandTotal = 0.0
-        grandTotal += transform(source: entityGateway.fetchAuthorizedTransactions(), group: .Authorized, presenter: presenter)
-        grandTotal += transform(source: entityGateway.fetchPostedTransactions(), group: .Posted, presenter: presenter)
+        grandTotal += transform(source: authorizedTransactions, group: .Authorized, presenter: presenter)
+        grandTotal += transform(source: postedTransactions, group: .Posted, presenter: presenter)
         presenter.presentGrandFooter(grandTotal: grandTotal)
 
         presenter.presentReport()
