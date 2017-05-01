@@ -1,9 +1,9 @@
 # CleanReportTableDemo
 This iOS app demonstrates an architectual solution to a fairly complex banking report scene.
 
-This is a refactoring of ReportTableDemo into a Clean Architecture
+This is a refactoring of ReportTableDemo into a VIPER Architecture.
 
-It shows how the clean architecture can be used to break up a potentially very Massive View Controller by using the following classes:
+It shows how VIPER can be used to break up a potentially very Massive View Controller by using the following classes:
 
 - a Use Case which transforms its input Model to an output protocol -- there are two transformers: one processes data originating from two separate streams, the other processes data originating from a single stream
 - a Presenter, which transforms its input Model (the output protcol from the use case) into a ViewModel. The presenter retains the View Model to act as data source for the TableView 
