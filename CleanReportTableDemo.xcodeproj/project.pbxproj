@@ -13,6 +13,7 @@
 		B313A8931D6E97F200A6F508 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B313A8921D6E97F200A6F508 /* Assets.xcassets */; };
 		B313A8961D6E97F200A6F508 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B313A8941D6E97F200A6F508 /* LaunchScreen.storyboard */; };
 		B331C32B1E9C3E7A00344D09 /* TransactionListGrandFooterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B331C3291E9C3DB200344D09 /* TransactionListGrandFooterCell.swift */; };
+		B348D6E51EB7F95300BC010E /* DateFormatter+Format.swift in Sources */ = {isa = PBXBuildFile; fileRef = B348D6E41EB7F95300BC010E /* DateFormatter+Format.swift */; };
 		B34F7A431E7763710059252C /* TransactionListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34F7A421E7763710059252C /* TransactionListCell.swift */; };
 		B34F7A451E7763AF0059252C /* TransactionListHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34F7A441E7763AF0059252C /* TransactionListHeaderCell.swift */; };
 		B34F7A471E7763F80059252C /* TransactionListSubheaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34F7A461E7763F80059252C /* TransactionListSubheaderCell.swift */; };
@@ -45,6 +46,7 @@
 		B313A8951D6E97F200A6F508 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B313A8971D6E97F200A6F508 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B331C3291E9C3DB200344D09 /* TransactionListGrandFooterCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionListGrandFooterCell.swift; sourceTree = "<group>"; };
+		B348D6E41EB7F95300BC010E /* DateFormatter+Format.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Format.swift"; sourceTree = "<group>"; };
 		B34F7A421E7763710059252C /* TransactionListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionListCell.swift; sourceTree = "<group>"; };
 		B34F7A441E7763AF0059252C /* TransactionListHeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionListHeaderCell.swift; sourceTree = "<group>"; };
 		B34F7A461E7763F80059252C /* TransactionListSubheaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionListSubheaderCell.swift; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 		B313A88A1D6E97F200A6F508 /* CleanReportTableDemo */ = {
 			isa = PBXGroup;
 			children = (
+				B348D6E41EB7F95300BC010E /* DateFormatter+Format.swift */,
 				B3721B9E1E860BCC0016D404 /* Color.swift */,
 				B3FA9B8D1D73385B0076422B /* AppDelegate.swift */,
 				B3FA9B711D73382D0076422B /* Scenes */,
@@ -280,6 +283,7 @@
 				B31212231E4AB3CD0050EBB9 /* TransactionListPresenter.swift in Sources */,
 				B3FA9B441D6FEB440076422B /* EntityGatewayImpl.swift in Sources */,
 				B3FA9B8E1D73385B0076422B /* AppDelegate.swift in Sources */,
+				B348D6E51EB7F95300BC010E /* DateFormatter+Format.swift in Sources */,
 				B3FA9B861D73382D0076422B /* TransactionListBeginOneSourceUseCaseTransformer.swift in Sources */,
 				B34F7A451E7763AF0059252C /* TransactionListHeaderCell.swift in Sources */,
 				B357A1751EB16045005DF42D /* TransactionListViewModel.swift in Sources */,
