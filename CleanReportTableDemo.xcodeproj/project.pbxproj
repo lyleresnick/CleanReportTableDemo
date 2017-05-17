@@ -187,8 +187,8 @@
 		B3FA9B791D73382D0076422B /* UseCase */ = {
 			isa = PBXGroup;
 			children = (
-				B3F4F2F21E4AA18500E65A75 /* TransactionListUseCaseOutput.swift */,
 				B3FA9B7A1D73382D0076422B /* TransactionListUseCase.swift */,
+				B3F4F2F21E4AA18500E65A75 /* TransactionListUseCaseOutput.swift */,
 				B3FA9B7B1D73382D0076422B /* TransactionListBeginOneSourceUseCaseTransformer.swift */,
 				B3FA9B7C1D73382D0076422B /* TransactionListBeginTwoSourceUseCaseTransformer.swift */,
 			);
