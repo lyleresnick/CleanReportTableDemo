@@ -1,7 +1,7 @@
 # CleanReportTableDemo
 This iOS app demonstrates an architectual solution to a fairly complex banking report scene.
 
-This is a refactoring of the ReportTableDemo into a VIPER Architecture.
+This is a refactoring of the  [ReportTableDemo](https://github.com/lyleresnick/ReportTableDemo) into a VIPER Architecture.
 
 It shows how VIPER can be used to break up a potentially very Massive View Controller by introducing the following classes:
 
