@@ -5,7 +5,6 @@ import Foundation
 enum TransactionGroup: String {
     case authorized = "A"
     case posted = "P"
-    case all = "0"
 
     func toString() -> String {
         switch self {
@@ -13,8 +12,6 @@ enum TransactionGroup: String {
             return "Authorized"
         case .posted:
             return "Posted"
-        case .all:
-            return "All"
         }
     }
 
