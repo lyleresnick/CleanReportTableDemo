@@ -17,8 +17,8 @@ class TransactionListPresenter {
         self.useCase = useCase
     }
 
-    func viewReady() {
-        useCase.beginOneSource()
+    func eventViewReady() {
+        useCase.begin()
     }
     
     func cellId(at index: Int) -> String {
@@ -45,7 +45,7 @@ extension TransactionListPresenter: TransactionListUseCaseOutput {
      func presentReport() {
         viewController.showReport()
     }
-
+    
     func presentHeader(group: TransactionGroup) {
         
         rows.append(.header(title: group.toString() + " Transactions"));

@@ -13,7 +13,7 @@ class TransactionListUseCase {
     }
     
 
-    func beginTwoSource() {
+    func begin() {
         
         let authorizedTransactions = entityGateway.fetchAuthorizedTransactions()
         let postedTransactions = entityGateway.fetchPostedTransactions()
