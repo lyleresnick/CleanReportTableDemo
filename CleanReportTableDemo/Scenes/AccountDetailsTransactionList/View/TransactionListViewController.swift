@@ -17,7 +17,7 @@ class TransactionListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        presenter.viewReady()
+        presenter.eventViewReady()
     }
 }
 

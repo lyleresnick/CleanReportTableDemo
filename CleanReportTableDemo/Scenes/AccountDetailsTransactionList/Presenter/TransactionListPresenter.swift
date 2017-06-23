@@ -17,21 +17,10 @@ class TransactionListPresenter {
         self.useCase = useCase
     }
 
-    func viewReady() {
-        useCase.beginOneSource()
+    func eventViewReady() {
+        useCase.begin()
     }
     
-    func cellId(at index: Int) -> String {
-        return rows[ index ].cellId
-    }
-    
-    func cellHeight(at index: Int) -> CGFloat {
-        return rows[ index ].height
-    }
-    
-    var rowCount: Int { return rows.count }
-    
-    func row(at index: Int) -> TransactionListViewModel { return rows[ index ] }
 }
 
 // MARK: - TransactionListUseCaseOutput
@@ -45,6 +34,18 @@ extension TransactionListPresenter: TransactionListUseCaseOutput {
      func presentReport() {
         viewController.showReport()
     }
+    
+    func cellId(at index: Int) -> String {
+        return rows[ index ].cellId
+    }
+    
+    func cellHeight(at index: Int) -> CGFloat {
+        return rows[ index ].height
+    }
+    
+    var rowCount: Int { return rows.count }
+    
+    func row(at index: Int) -> TransactionListViewModel { return rows[ index ] }
 
     func presentHeader(group: TransactionGroup) {
         
