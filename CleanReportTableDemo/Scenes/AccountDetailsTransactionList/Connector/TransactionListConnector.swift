@@ -2,7 +2,6 @@
 
 import UIKit
 
-
 class TransactionListConnector {
     
     private let viewController: TransactionListViewController
