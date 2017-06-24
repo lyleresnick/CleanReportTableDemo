@@ -30,7 +30,7 @@ class TransactionListConnector {
         viewController.presenter = presenter
         adapter.presenter = presenter
 
-        useCase.presenter = presenter
-        presenter.viewController = viewController
+        useCase.output = presenter
+        presenter.output = viewController
     }
 }

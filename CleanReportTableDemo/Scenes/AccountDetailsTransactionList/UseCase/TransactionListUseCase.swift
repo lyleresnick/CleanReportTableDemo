@@ -2,17 +2,15 @@
 
 import Foundation
 
-
 class TransactionListUseCase {
 
-    weak var presenter: TransactionListUseCaseOutput!
+    weak var output: TransactionListUseCaseOutput!
     private let entityGateway: EntityGateway
     
     init(entityGateway: EntityGateway) {
         self.entityGateway = entityGateway
     }
     
-
     func begin() {
         
         let authorizedTransactions = entityGateway.fetchAuthorizedTransactions()
@@ -20,7 +18,7 @@ class TransactionListUseCase {
         let transformer = TransactionListBeginTwoSourceUseCaseTransformer(
             authorizedTransactions: authorizedTransactions,
             postedTransactions: postedTransactions)
-        transformer.transform(presenter: presenter)
+        transformer.transform(output: output)
     }
     
     func beginOneSource() {
@@ -28,9 +26,7 @@ class TransactionListUseCase {
         let allTransactions = entityGateway.fetchAllTransactions()
         let transformer = TransactionListBeginOneSourceUseCaseTransformer(
             allTransactions: allTransactions)
-        transformer.transform(presenter: presenter)
+        transformer.transform(output: output)
     }
-    
-
 }
 
