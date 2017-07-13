@@ -13,19 +13,13 @@ class TransactionListUseCase {
     
     func begin() {
         
-        let authorizedTransactions = entityGateway.fetchAuthorizedTransactions()
-        let postedTransactions = entityGateway.fetchPostedTransactions()
-        let transformer = TransactionListBeginTwoSourceUseCaseTransformer(
-            authorizedTransactions: authorizedTransactions,
-            postedTransactions: postedTransactions)
+        let transformer = TransactionListUseCaseBeginTwoSourceTransformer(transactionManager: entityGateway.twoSourceManager)
         transformer.transform(output: output)
     }
     
     func beginOneSource() {
         
-        let allTransactions = entityGateway.fetchAllTransactions()
-        let transformer = TransactionListBeginOneSourceUseCaseTransformer(
-            allTransactions: allTransactions)
+        let transformer = TransactionListUseCaseBeginOneSourceTransformer(transactionManager: entityGateway.oneSourceManager)
         transformer.transform(output: output)
     }
 }

@@ -7,10 +7,6 @@ import Foundation
 
 protocol EntityGateway {
     
-    func fetchAllTransactions() -> [TransactionEntity]?
-    
-    func fetchAuthorizedTransactions() -> [TransactionEntity]?
-    
-    func fetchPostedTransactions() -> [TransactionEntity]?
-    
+    var oneSourceManager: OneSourceManager { get }
+    var twoSourceManager: TwoSourceManager { get }
 }

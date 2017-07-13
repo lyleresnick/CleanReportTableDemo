@@ -7,18 +7,6 @@ import Foundation
 
 class EntityGatewayImpl: EntityGateway {
     
-    func fetchAllTransactions() -> [TransactionEntity]? {
-        return TransactionEntity.allData
-    }
-    
-    func fetchAuthorizedTransactions() -> [TransactionEntity]? {
-        return TransactionEntity.authorizedData
-    }
-    
-    func fetchPostedTransactions() -> [TransactionEntity]? {
-        return TransactionEntity.postedData
-    }
-    
-
-    
+    var oneSourceManager: OneSourceManager = OneSourceManagerImpl()
+    var twoSourceManager: TwoSourceManager = TwoSourceManagerImpl()
 }
