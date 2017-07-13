@@ -7,7 +7,7 @@ class TransactionListConnector {
     private let viewController: TransactionListViewController
     private let adapter: TransactionListAdapter
     private let presenter: TransactionListPresenter
-    private var useCase: TransactionListUseCase
+    private let useCase: TransactionListUseCase
     
     init(viewController: TransactionListViewController, adapter: TransactionListAdapter, useCase: TransactionListUseCase, presenter: TransactionListPresenter) {
         
