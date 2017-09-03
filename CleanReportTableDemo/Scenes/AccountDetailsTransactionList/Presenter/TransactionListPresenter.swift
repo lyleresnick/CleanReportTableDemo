@@ -43,6 +43,7 @@ extension TransactionListPresenter: TransactionListUseCaseOutput {}
 extension TransactionListPresenter: TransactionListViewReadyUseCaseOutput {
     
     func presentInit() {
+        odd = false
         rows.removeAll()
     }
 
