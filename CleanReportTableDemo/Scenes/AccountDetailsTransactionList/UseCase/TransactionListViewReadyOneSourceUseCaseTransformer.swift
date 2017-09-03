@@ -3,7 +3,7 @@
 import Foundation
 
 
-class TransactionListUseCaseViewReadyOneSourceTransformer {
+class TransactionListViewReadyOneSourceUseCaseTransformer {
     
     private let transactionManager: OneSourceManager
 

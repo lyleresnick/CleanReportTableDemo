@@ -2,7 +2,7 @@
 
 import Foundation
 
-class TransactionListUseCaseViewReadyTwoSourceTransformer {
+class TransactionListViewReadyTwoSourceUseCaseTransformer {
     
     private let transactionManager: TwoSourceManager
 
