@@ -2,8 +2,6 @@
 
 import Foundation
 
-protocol TransactionListPresenterOutput: class {
-    func showReport()
-}
+protocol TransactionListPresenterOutput: TransactionListViewReadyPresenterOutput {}
 
 

@@ -18,7 +18,7 @@ class TransactionListPresenter {
     }
 
     func eventViewReady() {
-        useCase.begin()
+        useCase.eventViewReady()
     }
     
     func cellId(at index: Int) -> String {
@@ -36,7 +36,11 @@ class TransactionListPresenter {
 
 // MARK: - TransactionListUseCaseOutput
 
-extension TransactionListPresenter: TransactionListUseCaseOutput {
+extension TransactionListPresenter: TransactionListUseCaseOutput {}
+
+// MARK: - TransactionListViewReadyUseCaseOutput
+
+extension TransactionListPresenter: TransactionListViewReadyUseCaseOutput {
     
     func presentInit() {
         rows.removeAll()

@@ -11,15 +11,15 @@ class TransactionListUseCase {
         self.entityGateway = entityGateway
     }
     
-    func begin() {
+    func eventViewReady() {
         
-        let transformer = TransactionListUseCaseBeginTwoSourceTransformer(transactionManager: entityGateway.twoSourceManager)
+        let transformer = TransactionListUseCaseViewReadyTwoSourceTransformer(transactionManager: entityGateway.twoSourceManager)
         transformer.transform(output: output)
     }
     
-    func beginOneSource() {
+    func eventViewReadyOneSource() {
         
-        let transformer = TransactionListUseCaseBeginOneSourceTransformer(transactionManager: entityGateway.oneSourceManager)
+        let transformer = TransactionListUseCaseViewReadyOneSourceTransformer(transactionManager: entityGateway.oneSourceManager)
         transformer.transform(output: output)
     }
 }

@@ -24,6 +24,8 @@
 		B34F7A641E7809640059252C /* TransactionGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34F7A631E7809640059252C /* TransactionGroup.swift */; };
 		B357A1751EB16045005DF42D /* TransactionListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B357A1741EB16045005DF42D /* TransactionListViewModel.swift */; };
 		B3721B9F1E860BCC0016D404 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3721B9E1E860BCC0016D404 /* Color.swift */; };
+		B3C502681F5C6C050018D14A /* TransactionListViewReadyUseCaseOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C502671F5C6C050018D14A /* TransactionListViewReadyUseCaseOutput.swift */; };
+		B3C5026A1F5C6F310018D14A /* TransactionListViewReadyPresenterOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C502691F5C6F310018D14A /* TransactionListViewReadyPresenterOutput.swift */; };
 		B3DEB40A1F17ABD500CEE4EF /* OneSourceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DEB4061F17ABD500CEE4EF /* OneSourceManager.swift */; };
 		B3DEB40B1F17ABD500CEE4EF /* OneSourceManagerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DEB4071F17ABD500CEE4EF /* OneSourceManagerImpl.swift */; };
 		B3DEB40C1F17ABD500CEE4EF /* TwoSourceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DEB4081F17ABD500CEE4EF /* TwoSourceManager.swift */; };
@@ -34,8 +36,8 @@
 		B3FA9B441D6FEB440076422B /* EntityGatewayImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FA9B431D6FEB440076422B /* EntityGatewayImpl.swift */; };
 		B3FA9B821D73382D0076422B /* TransactionListConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FA9B751D73382D0076422B /* TransactionListConnector.swift */; };
 		B3FA9B851D73382D0076422B /* TransactionListUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FA9B7A1D73382D0076422B /* TransactionListUseCase.swift */; };
-		B3FA9B861D73382D0076422B /* TransactionListUseCaseBeginOneSourceTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FA9B7B1D73382D0076422B /* TransactionListUseCaseBeginOneSourceTransformer.swift */; };
-		B3FA9B871D73382D0076422B /* TransactionListUseCaseBeginTwoSourceTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FA9B7C1D73382D0076422B /* TransactionListUseCaseBeginTwoSourceTransformer.swift */; };
+		B3FA9B861D73382D0076422B /* TransactionListUseCaseViewReadyOneSourceTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FA9B7B1D73382D0076422B /* TransactionListUseCaseViewReadyOneSourceTransformer.swift */; };
+		B3FA9B871D73382D0076422B /* TransactionListUseCaseViewReadyTwoSourceTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FA9B7C1D73382D0076422B /* TransactionListUseCaseViewReadyTwoSourceTransformer.swift */; };
 		B3FA9B8A1D73382D0076422B /* TransactionListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FA9B801D73382D0076422B /* TransactionListViewController.swift */; };
 		B3FA9B8C1D7338420076422B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3FA9B8B1D7338420076422B /* Main.storyboard */; };
 		B3FA9B8E1D73385B0076422B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FA9B8D1D73385B0076422B /* AppDelegate.swift */; };
@@ -61,6 +63,8 @@
 		B34F7A631E7809640059252C /* TransactionGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionGroup.swift; sourceTree = "<group>"; };
 		B357A1741EB16045005DF42D /* TransactionListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionListViewModel.swift; sourceTree = "<group>"; };
 		B3721B9E1E860BCC0016D404 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		B3C502671F5C6C050018D14A /* TransactionListViewReadyUseCaseOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionListViewReadyUseCaseOutput.swift; sourceTree = "<group>"; };
+		B3C502691F5C6F310018D14A /* TransactionListViewReadyPresenterOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionListViewReadyPresenterOutput.swift; sourceTree = "<group>"; };
 		B3DEB4061F17ABD500CEE4EF /* OneSourceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OneSourceManager.swift; sourceTree = "<group>"; };
 		B3DEB4071F17ABD500CEE4EF /* OneSourceManagerImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OneSourceManagerImpl.swift; sourceTree = "<group>"; };
 		B3DEB4081F17ABD500CEE4EF /* TwoSourceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwoSourceManager.swift; sourceTree = "<group>"; };
@@ -71,8 +75,8 @@
 		B3FA9B431D6FEB440076422B /* EntityGatewayImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntityGatewayImpl.swift; sourceTree = "<group>"; };
 		B3FA9B751D73382D0076422B /* TransactionListConnector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionListConnector.swift; sourceTree = "<group>"; };
 		B3FA9B7A1D73382D0076422B /* TransactionListUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionListUseCase.swift; sourceTree = "<group>"; };
-		B3FA9B7B1D73382D0076422B /* TransactionListUseCaseBeginOneSourceTransformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionListUseCaseBeginOneSourceTransformer.swift; sourceTree = "<group>"; };
-		B3FA9B7C1D73382D0076422B /* TransactionListUseCaseBeginTwoSourceTransformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionListUseCaseBeginTwoSourceTransformer.swift; sourceTree = "<group>"; };
+		B3FA9B7B1D73382D0076422B /* TransactionListUseCaseViewReadyOneSourceTransformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionListUseCaseViewReadyOneSourceTransformer.swift; sourceTree = "<group>"; };
+		B3FA9B7C1D73382D0076422B /* TransactionListUseCaseViewReadyTwoSourceTransformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionListUseCaseViewReadyTwoSourceTransformer.swift; sourceTree = "<group>"; };
 		B3FA9B801D73382D0076422B /* TransactionListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionListViewController.swift; sourceTree = "<group>"; };
 		B3FA9B8B1D7338420076422B /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		B3FA9B8D1D73385B0076422B /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -94,6 +98,7 @@
 			children = (
 				B31212201E4AB3CD0050EBB9 /* TransactionListPresenter.swift */,
 				B31212211E4AB3CD0050EBB9 /* TransactionListPresenterOutput.swift */,
+				B3C502691F5C6F310018D14A /* TransactionListViewReadyPresenterOutput.swift */,
 				B357A1741EB16045005DF42D /* TransactionListViewModel.swift */,
 			);
 			path = Presenter;
@@ -209,8 +214,9 @@
 			children = (
 				B3FA9B7A1D73382D0076422B /* TransactionListUseCase.swift */,
 				B3F4F2F21E4AA18500E65A75 /* TransactionListUseCaseOutput.swift */,
-				B3FA9B7B1D73382D0076422B /* TransactionListUseCaseBeginOneSourceTransformer.swift */,
-				B3FA9B7C1D73382D0076422B /* TransactionListUseCaseBeginTwoSourceTransformer.swift */,
+				B3C502671F5C6C050018D14A /* TransactionListViewReadyUseCaseOutput.swift */,
+				B3FA9B7B1D73382D0076422B /* TransactionListUseCaseViewReadyOneSourceTransformer.swift */,
+				B3FA9B7C1D73382D0076422B /* TransactionListUseCaseViewReadyTwoSourceTransformer.swift */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -304,21 +310,23 @@
 				B3FA9B441D6FEB440076422B /* EntityGatewayImpl.swift in Sources */,
 				B3FA9B8E1D73385B0076422B /* AppDelegate.swift in Sources */,
 				B348D6E51EB7F95300BC010E /* DateFormatter+Format.swift in Sources */,
-				B3FA9B861D73382D0076422B /* TransactionListUseCaseBeginOneSourceTransformer.swift in Sources */,
+				B3FA9B861D73382D0076422B /* TransactionListUseCaseViewReadyOneSourceTransformer.swift in Sources */,
 				B34F7A451E7763AF0059252C /* TransactionListHeaderCell.swift in Sources */,
 				B357A1751EB16045005DF42D /* TransactionListViewModel.swift in Sources */,
 				B3DEB40A1F17ABD500CEE4EF /* OneSourceManager.swift in Sources */,
 				B331C32B1E9C3E7A00344D09 /* TransactionListGrandFooterCell.swift in Sources */,
 				B34F7A4F1E77656A0059252C /* TransactionListMessageCell.swift in Sources */,
+				B3C502681F5C6C050018D14A /* TransactionListViewReadyUseCaseOutput.swift in Sources */,
 				B31212241E4AB3CD0050EBB9 /* TransactionListPresenterOutput.swift in Sources */,
 				B34F7A431E7763710059252C /* TransactionListCell.swift in Sources */,
 				B3DEB40B1F17ABD500CEE4EF /* OneSourceManagerImpl.swift in Sources */,
 				B34F7A4B1E7764E40059252C /* TransactionListSubfooterCell.swift in Sources */,
 				B3FA9B851D73382D0076422B /* TransactionListUseCase.swift in Sources */,
-				B3FA9B871D73382D0076422B /* TransactionListUseCaseBeginTwoSourceTransformer.swift in Sources */,
+				B3FA9B871D73382D0076422B /* TransactionListUseCaseViewReadyTwoSourceTransformer.swift in Sources */,
 				B3721B9F1E860BCC0016D404 /* Color.swift in Sources */,
 				B3DEB40C1F17ABD500CEE4EF /* TwoSourceManager.swift in Sources */,
 				B34F7A491E7764B30059252C /* TransactionListDetailCell.swift in Sources */,
+				B3C5026A1F5C6F310018D14A /* TransactionListViewReadyPresenterOutput.swift in Sources */,
 				B3FA9B401D6FEA470076422B /* EntityGateway.swift in Sources */,
 				B3DEB40D1F17ABD500CEE4EF /* TwoSourceManagerImpl.swift in Sources */,
 				B34F7A641E7809640059252C /* TransactionGroup.swift in Sources */,

@@ -2,7 +2,7 @@
 
 import Foundation
 
-class TransactionListUseCaseBeginTwoSourceTransformer {
+class TransactionListUseCaseViewReadyTwoSourceTransformer {
     
     private let transactionManager: TwoSourceManager
 
@@ -10,7 +10,7 @@ class TransactionListUseCaseBeginTwoSourceTransformer {
         self.transactionManager = transactionManager
     }
 
-    func transform(output: TransactionListUseCaseOutput) {
+    func transform(output: TransactionListViewReadyUseCaseOutput) {
         
         output.presentInit()
 
@@ -22,7 +22,7 @@ class TransactionListUseCaseBeginTwoSourceTransformer {
         output.presentReport()
     }
 
-    private func transform(transactions: [TransactionEntity]?, group: TransactionGroup, output: TransactionListUseCaseOutput) -> Double {
+    private func transform(transactions: [TransactionEntity]?, group: TransactionGroup, output: TransactionListViewReadyUseCaseOutput) -> Double {
         
         var total = 0.0
         output.presentHeader(group: group)
