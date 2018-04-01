@@ -12,20 +12,16 @@ class TransactionListViewController: UIViewController {
         super.awakeFromNib()
         
         TransactionListConnector(viewController: self).configure()
+        adapter = TransactionListAdapter(presenter: presenter)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        configureAdapter()
-        presenter.eventViewReady()
-    }
-    
-    private func configureAdapter() {
-        
-        adapter = TransactionListAdapter(presenter: presenter)
         tableView.delegate = adapter
         tableView.dataSource = adapter
+        
+        presenter.eventViewReady()
     }
 }
 
