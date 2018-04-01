@@ -4,7 +4,11 @@ import UIKit
 
 class TransactionListAdapter: NSObject {
     
-    var presenter: TransactionListPresenter!
+    let presenter: TransactionListPresenter
+    
+    init(presenter: TransactionListPresenter) {
+        self.presenter = presenter
+    }
 }
 
 // MARK: UITableViewDataSource
