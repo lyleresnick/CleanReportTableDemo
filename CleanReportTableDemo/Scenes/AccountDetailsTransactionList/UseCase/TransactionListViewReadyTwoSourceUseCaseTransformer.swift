@@ -21,6 +21,13 @@ class TransactionListViewReadyTwoSourceUseCaseTransformer {
 
         output.presentReport()
     }
+    
+    enum State {
+        case start
+        case top
+        case date
+        case complete
+    }
 
     private func transform(transactions: [TransactionEntity]?, group: TransactionGroup, output: TransactionListViewReadyUseCaseOutput) -> Double {
         
@@ -29,29 +36,54 @@ class TransactionListViewReadyTwoSourceUseCaseTransformer {
         
         if let transactions = transactions {
 
-            if transactions.count == 0 {
-                output.presentNoTransactionsMessage(group: group)
-            }
-            else {
-                var transactionStream = transactions.makeIterator()
-                var transaction = transactionStream.next()
-                
-                while let localTransaction = transaction {
-                    
-                    let currentDate = localTransaction.date
-                    output.presentSubheader(date: currentDate)
-                    
-                    while let localTransaction = transaction,
-                        localTransaction.date == currentDate {
-                        
-                        total += localTransaction.amount
-                        output.presentDetail(description: localTransaction.description, amount: localTransaction.amount)
-                        transaction = transactionStream.next()
+            var transactionStream = transactions.makeIterator()
+            var transaction: TransactionEntity! = transactionStream.next()
+            var state = State.start
+            var currentDate: Date!
+            
+            func process(transaction: TransactionEntity! ) {
+
+                switch state {
+                case .start:
+                    if transaction == nil {
+                        output.presentNoTransactionsMessage(group: group)
+                        state = .complete
+                        break
                     }
-                    output.presentSubfooter()
+                    fallthrough
+                case .top:
+
+                    currentDate = transaction.date
+                    output.presentSubheader(date: currentDate)
+                    fallthrough
+                    
+                case .date:
+                    
+                    state = .date
+                    if transaction != nil && transaction.date == currentDate {
+
+                        total += transaction.amount
+                        output.presentDetail(description: transaction.description, amount: transaction.amount)
+                    }
+                    else {
+                        output.presentSubfooter()
+                        state = .top
+
+                        if transaction == nil {
+                            output.presentFooter(total: total)
+                            state = .complete
+                        }
+                    }
+                case .complete:
+                    break
                 }
-                output.presentFooter(total: total)
             }
+            
+            repeat {
+                process(transaction: transaction )
+                if transaction == nil { break }
+                transaction = transactionStream.next()
+            } while true
         }
         else {
             output.presentNotFoundMessage(group: group)
@@ -59,4 +91,6 @@ class TransactionListViewReadyTwoSourceUseCaseTransformer {
 
         return total
     }
+    
+    
 }
