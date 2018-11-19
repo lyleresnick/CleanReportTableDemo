@@ -2,12 +2,12 @@
 
 import Foundation
 
-class TransactionListUseCase {
-
-    weak var output: TransactionListUseCaseOutput!
-    private let entityGateway: EntityGateway
+class TransactionListUseCase: ViperUseCase {
+    var output: TransactionListUseCaseOutput!
     
-    init(entityGateway: EntityGateway) {
+    var entityGateway: EntityGateway
+    
+    required init(entityGateway: EntityGateway) {
         self.entityGateway = entityGateway
     }
     

@@ -2,7 +2,7 @@
 
 import UIKit
 
-class TransactionListViewController: UIViewController {
+class TransactionListViewController: UIViewController, ViperViewController {
 
     var presenter: TransactionListPresenter!
     @IBOutlet fileprivate weak var tableView: UITableView!
@@ -10,7 +10,6 @@ class TransactionListViewController: UIViewController {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        
         TransactionListConnector(viewController: self).configure()
         adapter = TransactionListAdapter(presenter: presenter)
     }
