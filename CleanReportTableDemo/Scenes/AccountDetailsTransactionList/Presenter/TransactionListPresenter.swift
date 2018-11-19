@@ -2,8 +2,9 @@
 
 import UIKit
 
-class TransactionListPresenter {
+class TransactionListPresenter: ViperPresenter {
     
+    let useCase: TransactionListUseCase
     weak var output: TransactionListPresenterOutput!
     
     fileprivate static let outboundDateFormatter = DateFormatter.dateFormatter( format: "MMM' 'dd', 'yyyy" )
@@ -11,9 +12,7 @@ class TransactionListPresenter {
     fileprivate var rows = [TransactionListViewModel]()
     fileprivate var odd = false
     
-    private let useCase: TransactionListUseCase
-    
-    init(useCase: TransactionListUseCase) {
+    required init(useCase: TransactionListUseCase) {
         self.useCase = useCase
     }
 

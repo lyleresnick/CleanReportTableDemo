@@ -2,18 +2,7 @@
 
 import UIKit
 
-class TransactionListConnector {
-    
-    private let viewController: TransactionListViewController
-    private let presenter: TransactionListPresenter
-    private let useCase: TransactionListUseCase
-    
-    init(viewController: TransactionListViewController, useCase: TransactionListUseCase, presenter: TransactionListPresenter) {
-        
-        self.viewController = viewController
-        self.useCase = useCase
-        self.presenter = presenter
-    }
+class TransactionListConnector: ViperConnector<TransactionListViewController, TransactionListPresenter, TransactionListUseCase> {
     
     convenience init(viewController: TransactionListViewController, entityGateway: EntityGateway = EntityGatewayImpl()) {
         
@@ -23,9 +12,4 @@ class TransactionListConnector {
         self.init(viewController: viewController, useCase: useCase, presenter: presenter)
     }
     
-    func configure() {
-        viewController.presenter = presenter
-        useCase.output = presenter
-        presenter.output = viewController
-    }
 }
