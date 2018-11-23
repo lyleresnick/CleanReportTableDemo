@@ -22,17 +22,28 @@ class ViperConnector<ViewController: ViperViewController, Presenter: ViperPresen
         self.presenter = presenter
     }
     
-//    convenience init(viewController: ViewController, entityGateway: EntityGateway = EntityGatewayImpl()) {
-//        
-//        let useCase = UseCase.self(entityGateway: entityGateway)
-//        let presenter = Presenter.self(useCase: useCase)
-//        
-//        self.init(viewController: viewController, useCase: useCase, presenter: presenter)
-//    }
+    convenience init(viewController: ViewController, entityGateway: EntityGateway = EntityGatewayImpl()) {
+        
+        let useCase = ViperConnector.createUseCase(useCaseType: UseCase.self, entityGateway: entityGateway)
+        let presenter = ViperConnector.createPresenter(presenterType: Presenter.self, useCase: useCase as! Presenter.ViperUseCase)
+
+        
+        self.init(viewController: viewController, useCase: useCase, presenter: presenter)
+    }
     
     func configure() {
         viewController.presenter = presenter as? ViewController.ViperPresenter
         useCase.output = presenter as? UseCase.ViperUseCaseOutput
         presenter.output = viewController as? Presenter.ViperPresenterOutput
     }
+    
+    
+    static func createUseCase<T>(useCaseType: T.Type, entityGateway: EntityGateway ) -> T where T : ViperUseCase {
+        return useCaseType.init(entityGateway: entityGateway)
+    }
+
+    static func createPresenter<T>(presenterType: T.Type, useCase: T.ViperUseCase ) -> T where T : ViperPresenter {
+        return presenterType.init(useCase: useCase)
+    }
+    
 }
