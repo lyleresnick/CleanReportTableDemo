@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6D000B5F21A83E9B00713FD6 /* ViperSimpleTableViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D000B5E21A83E9B00713FD6 /* ViperSimpleTableViewAdapter.swift */; };
+		6D000B6121A846CF00713FD6 /* ViperSimpleAdapterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D000B6021A846CF00713FD6 /* ViperSimpleAdapterPresenter.swift */; };
 		6DF37C562120880F00348E16 /* ViperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF37C552120880F00348E16 /* ViperViewController.swift */; };
 		6DF37C582120882C00348E16 /* ViperPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF37C572120882C00348E16 /* ViperPresenter.swift */; };
 		6DF37C5A212089B600348E16 /* ViperUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF37C59212089B600348E16 /* ViperUseCase.swift */; };
@@ -50,6 +52,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6D000B5E21A83E9B00713FD6 /* ViperSimpleTableViewAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViperSimpleTableViewAdapter.swift; sourceTree = "<group>"; };
+		6D000B6021A846CF00713FD6 /* ViperSimpleAdapterPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViperSimpleAdapterPresenter.swift; sourceTree = "<group>"; };
 		6DF37C552120880F00348E16 /* ViperViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViperViewController.swift; sourceTree = "<group>"; };
 		6DF37C572120882C00348E16 /* ViperPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViperPresenter.swift; sourceTree = "<group>"; };
 		6DF37C59212089B600348E16 /* ViperUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViperUseCase.swift; sourceTree = "<group>"; };
@@ -108,12 +112,14 @@
 		6DF37C542120880F00348E16 /* Viper */ = {
 			isa = PBXGroup;
 			children = (
+				6D000B5E21A83E9B00713FD6 /* ViperSimpleTableViewAdapter.swift */,
 				6DF37C552120880F00348E16 /* ViperViewController.swift */,
 				6DF37C572120882C00348E16 /* ViperPresenter.swift */,
 				6DF37C59212089B600348E16 /* ViperUseCase.swift */,
 				6DF37C5B21208A1200348E16 /* ViperUseCaseOutput.swift */,
 				6DF37C5D21208A3C00348E16 /* ViperPresenterOutput.swift */,
 				6DF37C6121208B3500348E16 /* ViperConnector.swift */,
+				6D000B6021A846CF00713FD6 /* ViperSimpleAdapterPresenter.swift */,
 			);
 			path = Viper;
 			sourceTree = "<group>";
@@ -348,12 +354,14 @@
 				B31212241E4AB3CD0050EBB9 /* TransactionListPresenterOutput.swift in Sources */,
 				B34F7A431E7763710059252C /* TransactionListCell.swift in Sources */,
 				B3DEB40B1F17ABD500CEE4EF /* OneSourceManagerImpl.swift in Sources */,
+				6D000B6121A846CF00713FD6 /* ViperSimpleAdapterPresenter.swift in Sources */,
 				6DF37C5A212089B600348E16 /* ViperUseCase.swift in Sources */,
 				B34F7A4B1E7764E40059252C /* TransactionListSubfooterCell.swift in Sources */,
 				B3FA9B851D73382D0076422B /* TransactionListUseCase.swift in Sources */,
 				B3FA9B871D73382D0076422B /* TransactionListViewReadyTwoSourceUseCaseTransformer.swift in Sources */,
 				B3721B9F1E860BCC0016D404 /* Color.swift in Sources */,
 				6DF37C582120882C00348E16 /* ViperPresenter.swift in Sources */,
+				6D000B5F21A83E9B00713FD6 /* ViperSimpleTableViewAdapter.swift in Sources */,
 				B3DEB40C1F17ABD500CEE4EF /* TwoSourceManager.swift in Sources */,
 				B34F7A491E7764B30059252C /* TransactionListDetailCell.swift in Sources */,
 				B3C5026A1F5C6F310018D14A /* TransactionListViewReadyPresenterOutput.swift in Sources */,
