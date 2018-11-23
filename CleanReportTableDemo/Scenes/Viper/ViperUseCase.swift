@@ -10,7 +10,6 @@ import Foundation
 
 
 protocol ViperUseCase: class {
-    associatedtype EntityGateway
     associatedtype ViperUseCaseOutput
 
     var output: ViperUseCaseOutput! { get set }
