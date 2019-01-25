@@ -11,7 +11,9 @@ import UIKit
 
 protocol ViperSimpleDataSourcePresenter: ViperPresenter {
     
+    associatedtype ViewModel
+    
     func cellId(at index: Int) -> String
     var rowCount: Int { get }
-    func row(at index: Int) -> TransactionListViewModel
+    func row(at index: Int) -> ViewModel
 }

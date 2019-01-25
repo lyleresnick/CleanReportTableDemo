@@ -3,9 +3,7 @@
 import UIKit
 
 class TransactionListPresenter: ViperSimpleDataSourcePresenter {
-    
-    typealias ViewModel = TransactionListViewModel
-    
+        
     let useCase: TransactionListUseCase
     weak var output: TransactionListPresenterOutput!
     

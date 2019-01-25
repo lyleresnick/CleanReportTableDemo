@@ -2,7 +2,7 @@
 
 import UIKit
 
-class TransactionListAdapter: ViperSimpleTableViewDataSource<TransactionListPresenter>, UITableViewDelegate {
+class TransactionListAdapter: ViperSimpleTableViewDataSource<TransactionListPresenter, TransactionListCell>, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return presenter.cellHeight(at: indexPath.row)

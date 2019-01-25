@@ -3,8 +3,7 @@
 
 import UIKit
 
-protocol TransactionListCell {
-    func show( row: TransactionListViewModel )
+protocol TransactionListCell: ViperTableViewCell {
 }
 
 

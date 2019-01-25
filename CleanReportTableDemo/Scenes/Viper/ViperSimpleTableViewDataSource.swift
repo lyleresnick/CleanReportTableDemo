@@ -2,8 +2,8 @@
 
 import UIKit
 
-class ViperSimpleTableViewDataSource<Presenter: ViperSimpleDataSourcePresenter>: NSObject, UITableViewDataSource {
-    
+class ViperSimpleTableViewDataSource<Presenter: ViperSimpleDataSourcePresenter, Cell: ViperTableViewCell>: NSObject, UITableViewDataSource where Presenter.ViewModel == Cell.ViewModel {
+        
     let presenter: Presenter
     
     init(presenter: Presenter) {
@@ -17,7 +17,7 @@ class ViperSimpleTableViewDataSource<Presenter: ViperSimpleDataSourcePresenter>:
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: presenter.cellId(at: indexPath.row), for: indexPath)
-        (cell as! TransactionListCell).show(row: presenter.row(at: indexPath.row))
+        (cell as! Cell).show(row: presenter.row(at: indexPath.row))
         return cell
     }
 
