@@ -9,10 +9,9 @@
 import UIKit
 
 
-protocol ViperSimpleAdapterPresenter: ViperPresenter {
+protocol ViperSimpleDataSourcePresenter: ViperPresenter {
     
     func cellId(at index: Int) -> String
-    func cellHeight(at index: Int) -> CGFloat
     var rowCount: Int { get }
     func row(at index: Int) -> TransactionListViewModel
 }

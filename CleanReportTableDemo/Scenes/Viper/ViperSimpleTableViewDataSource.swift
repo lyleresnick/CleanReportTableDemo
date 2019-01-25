@@ -2,7 +2,7 @@
 
 import UIKit
 
-class ViperSimpleTableViewAdapter<Presenter: ViperSimpleAdapterPresenter>: NSObject, UITableViewDataSource, UITableViewDelegate {
+class ViperSimpleTableViewDataSource<Presenter: ViperSimpleDataSourcePresenter>: NSObject, UITableViewDataSource {
     
     let presenter: Presenter
     
@@ -20,10 +20,5 @@ class ViperSimpleTableViewAdapter<Presenter: ViperSimpleAdapterPresenter>: NSObj
         (cell as! TransactionListCell).show(row: presenter.row(at: indexPath.row))
         return cell
     }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return presenter.cellHeight(at: indexPath.row)
-    }
-
 
 }
