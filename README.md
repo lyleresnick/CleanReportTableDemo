@@ -1,5 +1,5 @@
 # CleanReportTableDemo
-This iOS app demonstrates an architectual solution to a fairly complex banking report scene.
+This iOS app demonstrates an architectural solution to a fairly complex banking report scene.
 
 This is a refactoring of the  [ReportTableDemo](https://github.com/lyleresnick/ReportTableDemo) into a VIPER Architecture.
 
